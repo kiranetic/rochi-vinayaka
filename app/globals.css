@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  /* Surfaces */
+  --color-paper: #FDFBF7;
+  --color-stone: #F5F3EF;
+  --color-slate: #1A1D23;
+
+  /* Text */
+  --color-ink: #1E1E1E; /* Headings H1/H2 */
+  --color-charcoal: #2B2B2B; /* Headings H3, Emphasis */
+  --color-graphite: #3D3D3D; /* Body */
+  --color-steel: #6B6B6B; /* Captions, Metadata */
+  --color-whisper: #AFAFAF; /* Disabled */
+
+  /* Structural */
+  --color-mist: #D9D7D3; /* Borders */
+
+  /* Accent */
+  --color-bronze: #8C7356;
+  --color-bronze-light: #A68968;
+}
+
+@theme inline {
+  --color-paper: var(--color-paper);
+  --color-stone: var(--color-stone);
+  --color-slate: var(--color-slate);
+  --color-ink: var(--color-ink);
+  --color-charcoal: var(--color-charcoal);
+  --color-graphite: var(--color-graphite);
+  --color-steel: var(--color-steel);
+  --color-whisper: var(--color-whisper);
+  --color-mist: var(--color-mist);
+  --color-bronze: var(--color-bronze);
+  --color-bronze-light: var(--color-bronze-light);
+
+  --font-headline: var(--font-cormorant), serif;
+  --font-body: var(--font-inter), sans-serif;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-graphite);
+  font-family: var(--font-body);
+}
+
+/* Custom Utilities */
+.text-balance {
+  text-wrap: balance;
+}
