@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 };
 
 import { EvolutionTimeline } from "@/components/about/evolution";
+import { DivisionsStory } from "@/components/about/divisions-story";
 
 
 export default function About() {
@@ -57,8 +58,11 @@ export default function About() {
                 </Container>
             </Section>
 
+            {/* Divisions Story Section */}
+            < DivisionsStory />
+
             {/* Timeline */}
-            <Section background="stone" className="overflow-hidden py-16">
+            < Section background="stone" className="overflow-hidden py-16" >
                 <Container>
                     <FadeIn>
                         <EvolutionTimeline />
@@ -67,10 +71,10 @@ export default function About() {
                         </p>
                     </FadeIn>
                 </Container>
-            </Section>
+            </Section >
 
             {/* Beliefs */}
-            <Section>
+            < Section >
                 <Container>
                     <FadeIn>
                         <h2 className="font-headline text-4xl text-charcoal mb-16">What Guides Us</h2>
@@ -91,10 +95,10 @@ export default function About() {
                         </div>
                     </FadeIn>
                 </Container>
-            </Section>
+            </Section >
 
             {/* Reliable CTA */}
-            <Section background="slate" className="text-center">
+            < Section background="slate" className="text-center" >
                 <Container>
                     <FadeIn>
                         <h2 className="font-headline text-4xl text-paper mb-6">A Reliable Presence</h2>
@@ -106,7 +110,7 @@ export default function About() {
                         </Link>
                     </FadeIn>
                 </Container>
-            </Section>
+            </Section >
         </>
     );
 }
