@@ -12,12 +12,7 @@ export const metadata: Metadata = {
     description: "A Family Enterprise Rooted in Craft, Built on Continuity. Established in 1987 in Bengaluru.",
 };
 
-const timelineEvents = [
-    { year: "1987", title: "Establishment", desc: "Vinayaka Service Center founded, focused on sewing machine service and repairs." },
-    { year: "2003", title: "Expansion", desc: "Launch of Vinayaka Overseas to support sales and sourcing of sewing machines." },
-    { year: "2009", title: "Showroom", desc: "Opening of a multi-brand showroom in BTM Layout, Bengaluru." },
-    { year: "2019", title: "Specialization", desc: "Formation of Vinayaka Embroidery World, a dedicated embroidery technology division." },
-];
+import { EvolutionTimeline } from "@/components/about/evolution";
 
 
 export default function About() {
@@ -63,26 +58,11 @@ export default function About() {
             </Section>
 
             {/* Timeline */}
-            <Section background="stone" className="overflow-hidden">
+            <Section background="stone" className="overflow-hidden py-16">
                 <Container>
                     <FadeIn>
-                        <h2 className="font-headline text-4xl text-charcoal mb-16">Our Evolution</h2>
-                        <div className="flex flex-col md:flex-row gap-12 md:gap-0 relative">
-                            {/* Line */}
-                            <div className="hidden md:block absolute top-[18px] left-0 right-0 h-px bg-mist" />
-
-                            {timelineEvents.map((event, index) => (
-                                <div key={event.year} className="flex-1 relative pr-8">
-                                    <div className="hidden md:block w-3 h-3 bg-bronze rounded-full absolute top-[13px] hover:scale-125 transition-transform" />
-                                    <div className="md:pt-12">
-                                        <span className="font-headline text-3xl text-bronze mb-2 block">{event.year}</span>
-                                        <h3 className="font-semibold text-charcoal mb-3">{event.title}</h3>
-                                        <p className="text-sm text-graphite leading-relaxed">{event.desc}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                        <p className="mt-16 text-lg font-medium italic text-stone-darker opacity-60">
+                        <EvolutionTimeline />
+                        <p className="mt-12 text-center text-lg font-medium italic text-stone-darker opacity-60">
                             Each milestone reflects measured growth – driven by demand, not disruption.
                         </p>
                     </FadeIn>
