@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/ui/fade-in";
 import { Hero } from "@/components/home/hero";
 import { ProductCard } from "@/components/product-card";
+import { WhyChooseUs } from "@/components/home/why-choose-us";
 import popularProductsData from "@/json-data/popular_products.json";
 
 export default function Home() {
@@ -159,26 +160,14 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* 5. Philosophy */}
-      <Section background="paper">
-        <Container size="sm">
-          <FadeIn className="text-center">
-            <h2 className="font-headline text-3xl md:text-4xl text-charcoal mb-12">Why Clients Stay With Us</h2>
-            <div className="grid gap-8 font-body text-lg text-graphite">
-              <div className="py-4 border-b border-mist">Over three decades of industry continuity</div>
-              <div className="py-4 border-b border-mist">Sales, service, and spares under one group</div>
-              <div className="py-4 border-b border-mist">Long-standing relationships with businesses and households</div>
-              <div className="py-4">Disciplined operations with personal accountability</div>
-            </div>
-          </FadeIn>
-        </Container>
-      </Section>
+      {/* 5. Philosophy (Redesigned) */}
+      <WhyChooseUs />
 
       {/* 6. Trusted By */}
       <Section background="stone">
         <Container>
           <FadeIn className="text-center">
-            <h3 className="uppercase tracking-widest text-sm font-semibold text-steel mb-8">Trusted by Established Businesses</h3>
+            <h3 className="uppercase tracking-widest text-sm font-semibold text-bronze mb-8">Trusted by Established Businesses</h3>
             <p className="font-headline text-2xl md:text-3xl text-charcoal max-w-4xl mx-auto leading-normal">
               Our machines and services support operations across manufacturing, leather, lifestyle, apparel, and creative industries – quietly enabling scale, consistency, and output.
             </p>
