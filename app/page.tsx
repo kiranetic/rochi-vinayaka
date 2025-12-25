@@ -8,6 +8,7 @@ import { FadeIn } from "@/components/ui/fade-in";
 import { Hero } from "@/components/home/hero";
 import { ProductCard } from "@/components/product-card";
 import { WhyChooseUs } from "@/components/home/why-choose-us";
+import { ProductCarousel } from "@/components/home/product-carousel";
 import popularProductsData from "@/json-data/popular_products.json";
 
 export default function Home() {
@@ -56,29 +57,8 @@ export default function Home() {
         </Container>
       </Section>
 
-      {/* 3. Popular Products */}
-      <Section background="paper">
-        <Container>
-          <FadeIn className="text-center mb-16">
-            <h2 className="font-headline text-4xl md:text-5xl text-ink mb-6">Popular Products</h2>
-            <p className="text-graphite text-lg max-w-2xl mx-auto">
-              Curated selections from our domestic and embroidery ranges.
-            </p>
-          </FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {popularProductsData.products.slice(0, 6).map((product, index) => (
-              <FadeIn key={product.id} delay={index * 0.1}>
-                <ProductCard product={product} />
-              </FadeIn>
-            ))}
-          </div>
-          <div className="mt-12 text-center">
-            <Link href="/products">
-              <Button variant="outline" className="border-mist text-ink hover:bg-stone">View All Products</Button>
-            </Link>
-          </div>
-        </Container>
-      </Section>
+      {/* 3. Popular Products (Carousel) */}
+      <ProductCarousel />
 
       {/* 4. The Tri-Vertical System */}
       <Section id="divisions" background="stone" className="!p-0 !py-0">
