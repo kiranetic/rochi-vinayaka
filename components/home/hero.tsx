@@ -14,7 +14,7 @@ export function Hero() {
                     duration: 0.8,
                     ease: "easeInOut",
                 }}
-                className="font-headline text-5xl md:text-7xl lg:text-8xl leading-[0.95] text-ink tracking-tight bg-gradient-to-br from-ink to-ink/60 bg-clip-text text-transparent"
+                className="font-headline text-5xl md:text-7xl lg:text-8xl leading-[0.95] text-ink tracking-tight bg-gradient-to-br from-ink to-ink/60 bg-clip-text text-transparent py-4"
             >
                 Since 1987. <br />
                 Built on Trust. <br />

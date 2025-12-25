@@ -100,7 +100,7 @@ export default function Products() {
                                     placeholder="Search by name, brand, or category..."
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
-                                    className="w-full pl-12 pr-4 py-3 rounded-lg border border-mist bg-stone/30 focus:bg-stone focus:border-bronze focus:outline-none transition-all text-charcoal placeholder:text-steel/80"
+                                    className="w-full pl-12 pr-4 py-3 rounded-lg border border-mist bg-paper focus:bg-white focus:border-bronze focus:outline-none transition-all text-charcoal placeholder:text-graphite/60 shadow-sm"
                                 />
                             </div>
 
@@ -108,7 +108,7 @@ export default function Products() {
                             <div className="relative w-full lg:w-1/4">
                                 <button
                                     onClick={() => setIsBrandOpen(!isBrandOpen)}
-                                    className="w-full flex items-center justify-between px-4 py-3 rounded-lg border border-mist bg-stone/30 hover:bg-stone transition-all text-charcoal"
+                                    className="w-full flex items-center justify-between px-4 py-3 rounded-lg border border-mist bg-paper hover:bg-white hover:border-bronze transition-all text-charcoal shadow-sm"
                                 >
                                     <span className="truncate">{selectedBrand}</span>
                                     <ChevronDown className={cn("w-4 h-4 transition-transform", isBrandOpen ? "rotate-180" : "")} />
@@ -178,27 +178,27 @@ export default function Products() {
                                     exit={{ opacity: 0, scale: 0.95 }}
                                     transition={{ duration: 0.3 }}
                                 >
-                                    <div className="group h-full flex flex-col bg-paper border border-mist hover:border-bronze hover:shadow-lg transition-all duration-500 overflow-hidden rounded-sm">
-                                        {/* Image via ProductCard logic or simplified here since we need Inquire button */}
-                                        {/* Reusing ProductCard but strictly controlling actions? 
-                            The user asked to REMOVE view details and use Inquire Now. 
-                            Since ProductCard might have hardcoded View Details, I might need to mod it or inline here.
-                            Let's inline the card design to ensure strict adherence to "Inquire Now" requirement. 
-                        */}
+                                    <div className="group h-full flex flex-col bg-paper border border-mist hover:border-bronze hover:shadow-lg transition-all duration-500 overflow-hidden rounded-sm relative">
                                         <div className="relative aspect-square overflow-hidden bg-white p-6 flex items-center justify-center">
                                             {/* eslint-disable-next-line @next/next/no-img-element */}
                                             <img
                                                 src={product.image.startsWith("./") ? product.image.slice(1) : product.image}
                                                 alt={product.name}
-                                                className="object-contain w-full h-full group-hover:scale-105 transition-transform duration-700"
+                                                className="object-contain w-full h-full group-hover:scale-95 transition-transform duration-700"
                                             />
+
+                                            {/* Description Overlay on Hover */}
+                                            <div className="absolute inset-0 bg-paper/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6 text-center">
+                                                <p className="text-charcoal font-medium leading-relaxed">
+                                                    {product.description || "Designed for precision and reliability."}
+                                                </p>
+                                            </div>
                                         </div>
 
-                                        <div className="p-6 flex flex-col flex-grow">
+                                        <div className="p-6 flex flex-col flex-grow relative z-10 bg-paper">
                                             <div className="mb-auto">
                                                 <p className="text-xs font-bold uppercase tracking-widest text-bronze mb-2">{product.brand}</p>
                                                 <h3 className="font-headline text-xl text-ink mb-2">{product.name}</h3>
-                                                {/* Simple truncated description if available */}
                                             </div>
 
                                             <div className="pt-6 mt-6 border-t border-mist/30">

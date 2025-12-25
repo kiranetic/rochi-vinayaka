@@ -51,10 +51,10 @@ export function Footer() {
                             <p>BTM Layout, 2nd Stage,</p>
                             <p>Bengaluru, Karnataka - 560076</p>
                             <div className="pt-2 text-bronze space-y-1">
-                                <p>(+91) 98451 89492</p>
-                                <p>(+91) 96065 00492</p>
+                                <a href="tel:+919845189492" className="block hover:text-white transition-colors">(+91) 98451 89492</a>
+                                <a href="tel:+919606500492" className="block hover:text-white transition-colors">(+91) 96065 00492</a>
                             </div>
-                            <p className="hover:text-white transition-colors cursor-pointer pt-2">vinayaka-groups@gmail.com</p>
+                            <a href="mailto:vinayaka-groups@gmail.com" className="block hover:text-white transition-colors cursor-pointer pt-2">vinayaka-groups@gmail.com</a>
                         </address>
                     </div>
                 </div>

@@ -35,8 +35,18 @@ export default function Contact() {
                             <div>
                                 <h3 className="text-sm font-semibold uppercase tracking-widest text-steel mb-4">Reach Us_</h3>
                                 <div className="space-y-2 text-lg text-charcoal">
-                                    <p><span className="text-bronze mr-4">P</span> (+91) 98451 89492 / 96065 00492</p>
-                                    <p><span className="text-bronze mr-4">E</span> vinayaka-groups@gmail.com</p>
+                                    <p className="flex items-center gap-2">
+                                        <span className="text-bronze font-bold">P</span>
+                                        <span>
+                                            <a href="tel:+919845189492" className="hover:text-bronze transition-colors">(+91) 98451 89492</a>
+                                            <span className="mx-2 text-mist">/</span>
+                                            <a href="tel:+919606500492" className="hover:text-bronze transition-colors">(+91) 96065 00492</a>
+                                        </span>
+                                    </p>
+                                    <p className="flex items-center gap-2">
+                                        <span className="text-bronze font-bold">E</span>
+                                        <a href="mailto:vinayaka-groups@gmail.com" className="hover:text-bronze transition-colors">vinayaka-groups@gmail.com</a>
+                                    </p>
                                 </div>
                             </div>
 
