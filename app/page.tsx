@@ -9,6 +9,7 @@ import { Hero } from "@/components/home/hero";
 import { ProductCard } from "@/components/product-card";
 import { WhyChooseUs } from "@/components/home/why-choose-us";
 import { ProductCarousel } from "@/components/home/product-carousel";
+import { DivisionsGrid } from "@/components/home/divisions-grid";
 import popularProductsData from "@/json-data/popular_products.json";
 
 export default function Home() {
@@ -60,85 +61,8 @@ export default function Home() {
       {/* 3. Popular Products (Carousel) */}
       <ProductCarousel />
 
-      {/* 4. The Tri-Vertical System */}
-      <Section id="divisions" background="stone" className="!p-0 !py-0">
-        <div className="grid grid-cols-1 lg:grid-cols-3 min-h-[80vh]">
-          {/* Division 1: Overseas */}
-          <Link href="/divisions/overseas" className="group relative border-r border-mist last:border-0 min-h-[50vh] lg:min-h-auto block overflow-hidden">
-            <div className="absolute inset-0 bg-slate transition-transform duration-700 translate-y-full group-hover:translate-y-0 z-10 opacity-95" />
-            <div className="absolute inset-0 z-0">
-              <Image
-                src="/assets/picture/accessories-storage.jpg"
-                alt="Vinayaka Overseas"
-                fill
-                className="object-cover img-warm-tone"
-              />
-              <div className="absolute inset-0 bg-white/80 group-hover:bg-transparent transition-colors duration-500" />
-            </div>
-
-            <div className="relative z-20 h-full p-12 flex flex-col justify-between group-hover:text-stone transition-colors duration-300">
-              <div>
-                <h3 className="font-headline text-3xl font-medium mb-4 group-hover:text-paper">Vinayaka Overseas</h3>
-                <div className="w-12 h-px bg-charcoal group-hover:bg-bronze transition-colors" />
-              </div>
-              <div className="transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">
-                <p className="mb-6 font-body text-stone/90">Sales and sourcing of domestic, industrial, and refurbished sewing machines.</p>
-                <span className="flex items-center text-sm uppercase tracking-widest text-bronze font-semibold">Explore <MoveRight className="ml-2 w-4 h-4" /></span>
-              </div>
-            </div>
-          </Link>
-
-          {/* Division 2: Embroidery World */}
-          <Link href="/divisions/embroidery" className="group relative border-r border-mist last:border-0 min-h-[50vh] lg:min-h-auto block overflow-hidden">
-            <div className="absolute inset-0 bg-slate transition-transform duration-700 translate-y-full group-hover:translate-y-0 z-10 opacity-95" />
-            <div className="absolute inset-0 z-0">
-              <Image
-                src="/assets/picture/production-line.jpg"
-                alt="Vinayaka Embroidery World"
-                fill
-                className="object-cover img-warm-tone"
-              />
-              <div className="absolute inset-0 bg-white/80 group-hover:bg-transparent transition-colors duration-500" />
-            </div>
-
-            <div className="relative z-20 h-full p-12 flex flex-col justify-between group-hover:text-stone transition-colors duration-300">
-              <div>
-                <h3 className="font-headline text-3xl font-medium mb-4 group-hover:text-paper">Vinayaka Embroidery World</h3>
-                <div className="w-12 h-px bg-charcoal group-hover:bg-bronze transition-colors" />
-              </div>
-              <div className="transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">
-                <p className="mb-6 font-body text-stone/90">Specialized vertical dedicated to computerized embroidery technology.</p>
-                <span className="flex items-center text-sm uppercase tracking-widest text-bronze font-semibold">Explore <MoveRight className="ml-2 w-4 h-4" /></span>
-              </div>
-            </div>
-          </Link>
-
-          {/* Division 3: Service Center */}
-          <Link href="/divisions/service-center" className="group relative min-h-[50vh] lg:min-h-auto block overflow-hidden">
-            <div className="absolute inset-0 bg-slate transition-transform duration-700 translate-y-full group-hover:translate-y-0 z-10 opacity-95" />
-            <div className="absolute inset-0 z-0">
-              <Image
-                src="/assets/picture/precision-sewing.jpg"
-                alt="Vinayaka Service Center"
-                fill
-                className="object-cover object-left img-warm-tone"
-              />
-              <div className="absolute inset-0 bg-white/80 group-hover:bg-transparent transition-colors duration-500" />
-            </div>
-
-            <div className="relative z-20 h-full p-12 flex flex-col justify-between group-hover:text-stone transition-colors duration-300">
-              <div>
-                <h3 className="font-headline text-3xl font-medium mb-4 group-hover:text-paper">Vinayaka Service Center</h3>
-                <div className="w-12 h-px bg-charcoal group-hover:bg-bronze transition-colors" />
-              </div>
-              <div className="transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">
-                <p className="mb-6 font-body text-stone/90">The foundation of our legacy – service, maintenance, and genuine spare parts.</p>
-                <span className="flex items-center text-sm uppercase tracking-widest text-bronze font-semibold">Explore <MoveRight className="ml-2 w-4 h-4" /></span>
-              </div>
-            </div>
-          </Link>
-        </div>
-      </Section>
+      {/* 4. The Tri-Vertical System (Card Grid) */}
+      <DivisionsGrid />
 
       {/* 5. Philosophy (Redesigned) */}
       <WhyChooseUs />
