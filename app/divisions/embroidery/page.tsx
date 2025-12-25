@@ -18,18 +18,19 @@ export default function Embroidery() {
                 />
                 <Container className="relative z-10">
                     <FadeIn>
-                        <div className="mb-8 relative w-24 h-24 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 p-4 flex items-center justify-center">
+                        <div className="mb-8 relative w-48 h-48 rounded-full bg-white flex items-center justify-center overflow-hidden shadow-2xl border-4 border-white/20">
                             <Image
                                 src="/assets/logo/vew-logo.png"
                                 alt="Vinayaka Embroidery World Logo"
-                                width={80}
-                                height={80}
-                                className="object-contain"
+                                fill
+                                className="object-cover"
                             />
                         </div>
-                        <span className="text-sm font-semibold uppercase tracking-widest text-[#A85846] mb-4 block">Division</span>
-                        <h1 className="font-headline text-5xl md:text-6xl mb-6">Vinayaka <span className="text-[#A85846]">Embroidery World</span></h1>
-                        <p className="text-xl md:text-2xl opacity-90 max-w-2xl">
+                        <span className="text-sm font-bold uppercase tracking-widest text-white mb-4 block drop-shadow-md">Division</span>
+                        <h1 className="font-headline text-4xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                            Vinayaka <span>Embroidery World</span>
+                        </h1>
+                        <p className="text-lg md:text-2xl font-medium text-white max-w-4xl drop-shadow-md">
                             Precision Technology for Creative and Industrial Embroidery
                         </p>
                     </FadeIn>
