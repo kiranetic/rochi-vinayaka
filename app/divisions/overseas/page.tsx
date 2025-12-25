@@ -18,8 +18,17 @@ export default function Overseas() {
                 />
                 <Container className="relative z-10">
                     <FadeIn>
-                        <span className="text-sm font-semibold uppercase tracking-widest text-bronze mb-4 block">Division</span>
-                        <h1 className="font-headline text-5xl md:text-6xl mb-6">Vinayaka Overseas</h1>
+                        <div className="mb-8 relative w-24 h-24 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 p-4 flex items-center justify-center">
+                            <Image
+                                src="/assets/logo/vos-logo.jpeg"
+                                alt="Vinayaka Overseas Logo"
+                                width={80}
+                                height={80}
+                                className="object-contain"
+                            />
+                        </div>
+                        <span className="text-sm font-semibold uppercase tracking-widest text-[#A85846] mb-4 block">Division</span>
+                        <h1 className="font-headline text-5xl md:text-6xl mb-6">Vinayaka <span className="text-[#A85846]">Overseas</span></h1>
                         <p className="text-xl md:text-2xl opacity-90 max-w-2xl">
                             Sewing Machine Sales Backed by Process and Accountability
                         </p>

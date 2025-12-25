@@ -17,8 +17,8 @@ export function Hero() {
                 className="font-headline text-5xl md:text-7xl lg:text-8xl leading-[0.95] text-ink tracking-tight bg-gradient-to-br from-ink to-ink/60 bg-clip-text text-transparent py-4"
             >
                 Since 1987. <br />
-                Built on Trust. <br />
-                Refined Through Experience.
+                Built on <span className="text-[#A85846]">Trust</span>. <br />
+                Refined Through <span className="text-[#A85846]">Experience</span>.
             </motion.h1>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}

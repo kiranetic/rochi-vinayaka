@@ -25,7 +25,7 @@ export default function About() {
                             <FadeIn>
                                 <span className="text-sm font-semibold uppercase tracking-widest text-steel mb-4 block">Our Story</span>
                                 <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl text-ink mb-12 leading-tight">
-                                    A Family Enterprise Rooted in Craft, Built on Continuity
+                                    A Family Enterprise Rooted in <span className="text-[#A85846]">Craft</span>, Built on <span className="text-[#A85846]">Continuity</span>
                                 </h1>
                                 <div className="space-y-6 text-lg text-graphite font-body leading-relaxed max-w-2xl">
                                     <p>

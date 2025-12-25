@@ -1,73 +1,83 @@
-"use client"
+"use client";
 
-import type React from "react"
+import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
+import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { cn } from "@/lib/utils";
 
-import { useState, useEffect, useRef } from "react"
-import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from "framer-motion"
-
-const testimonials = [
+const milestones = [
     {
-        quote: "Transformed our entire creative process overnight.",
-        author: "Sarah Chen",
-        role: "Design Director",
-        company: "Linear",
+        year: "1987",
+        title: "Establishment",
+        subtitle: "Vinayaka Service Center",
+        description: "Founded with a singular focus on sewing machine service and repairs. Building trust through technical expertise and honest guidance.",
+        logo: "/assets/logo/vinayaka-groups-logo.svg",
     },
     {
-        quote: "The most elegant solution we've ever implemented.",
-        author: "Marcus Webb",
-        role: "Creative Lead",
-        company: "Vercel",
+        year: "2003",
+        title: "Expansion",
+        subtitle: "Vinayaka Overseas",
+        description: "Expanding horizons to support sales and global sourcing of high-quality sewing machines for the Indian market.",
+        logo: "/assets/logo/vos-logo.jpeg",
     },
     {
-        quote: "Pure craftsmanship in every single detail.",
-        author: "Elena Frost",
-        role: "Head of Product",
-        company: "Stripe",
+        year: "2009",
+        title: "Showroom",
+        subtitle: "BTM Layout, Bengaluru",
+        description: "Opening our multi-brand showroom to provide a tactile, hands-on experience for our customers.",
+        logo: "/assets/logo/vinayaka-groups-logo.svg",
     },
-]
+    {
+        year: "2019",
+        title: "Specialization",
+        subtitle: "Vinayaka Embroidery World",
+        description: "Formation of a dedicated division for advanced embroidery technology, serving professionals and creators.",
+        logo: "/assets/logo/vew-logo.png",
+    },
+];
 
-export function Testimonial() {
-    const [activeIndex, setActiveIndex] = useState(0)
-    const containerRef = useRef<HTMLDivElement>(null)
+export function EvolutionTimeline() {
+    const [activeIndex, setActiveIndex] = useState(0);
+    const containerRef = useRef<HTMLDivElement>(null);
 
     // Mouse position for magnetic effect
-    const mouseX = useMotionValue(0)
-    const mouseY = useMotionValue(0)
+    const mouseX = useMotionValue(0);
+    const mouseY = useMotionValue(0);
 
-    const springConfig = { damping: 25, stiffness: 200 }
-    const x = useSpring(mouseX, springConfig)
-    const y = useSpring(mouseY, springConfig)
+    const springConfig = { damping: 25, stiffness: 200 };
+    const x = useSpring(mouseX, springConfig);
+    const y = useSpring(mouseY, springConfig);
 
     // Transform for parallax on the large number
-    const numberX = useTransform(x, [-200, 200], [-20, 20])
-    const numberY = useTransform(y, [-200, 200], [-10, 10])
+    const numberX = useTransform(x, [-200, 200], [-20, 20]);
+    const numberY = useTransform(y, [-200, 200], [-10, 10]);
 
     const handleMouseMove = (e: React.MouseEvent) => {
-        const rect = containerRef.current?.getBoundingClientRect()
+        const rect = containerRef.current?.getBoundingClientRect();
         if (rect) {
-            const centerX = rect.left + rect.width / 2
-            const centerY = rect.top + rect.height / 2
-            mouseX.set(e.clientX - centerX)
-            mouseY.set(e.clientY - centerY)
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            mouseX.set(e.clientX - centerX);
+            mouseY.set(e.clientY - centerY);
         }
-    }
+    };
 
-    const goNext = () => setActiveIndex((prev) => (prev + 1) % testimonials.length)
-    const goPrev = () => setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
+    const goNext = () => setActiveIndex((prev) => (prev + 1) % milestones.length);
+    const goPrev = () => setActiveIndex((prev) => (prev - 1 + milestones.length) % milestones.length);
 
     useEffect(() => {
-        const timer = setInterval(goNext, 6000)
-        return () => clearInterval(timer)
-    }, [])
+        const timer = setInterval(goNext, 8000);
+        return () => clearInterval(timer);
+    }, []);
 
-    const current = testimonials[activeIndex]
+    const current = milestones[activeIndex];
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-background overflow-hidden">
-            <div ref={containerRef} className="relative w-full max-w-5xl" onMouseMove={handleMouseMove}>
+        <div className="flex items-center justify-center min-h-[600px] overflow-hidden bg-stone py-20 rounded-md border border-mist/30">
+            <div ref={containerRef} className="relative w-full max-w-6xl px-4 md:px-8" onMouseMove={handleMouseMove}>
                 {/* Oversized index number - positioned to bleed off left edge */}
                 <motion.div
-                    className="absolute -left-8 top-1/2 -translate-y-1/2 text-[28rem] font-bold text-foreground/[0.03] select-none pointer-events-none leading-none tracking-tighter"
+                    className="absolute -left-12 lg:-left-24 top-1/2 -translate-y-1/2 text-[12rem] md:text-[20rem] lg:text-[28rem] font-bold text-ink/[0.03] select-none pointer-events-none leading-none tracking-tighter z-0"
                     style={{ x: numberX, y: numberY }}
                 >
                     <AnimatePresence mode="wait">
@@ -79,31 +89,31 @@ export function Testimonial() {
                             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                             className="block"
                         >
-                            {String(activeIndex + 1).padStart(2, "0")}
+                            {current.year.slice(-2)}
                         </motion.span>
                     </AnimatePresence>
                 </motion.div>
 
                 {/* Main content - asymmetric layout */}
-                <div className="relative flex">
+                <div className="relative flex flex-col md:flex-row z-10">
                     {/* Left column - vertical text */}
-                    <div className="flex flex-col items-center justify-center pr-16 border-r border-border">
+                    <div className="hidden md:flex flex-col items-center justify-center pr-16 border-r border-mist/50">
                         <motion.span
-                            className="text-xs font-mono text-muted-foreground tracking-widest uppercase"
+                            className="text-xs font-mono text-bronze tracking-widest uppercase"
                             style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.3 }}
                         >
-                            Testimonials
+                            Our Evolution
                         </motion.span>
 
                         {/* Vertical progress line */}
-                        <div className="relative h-32 w-px bg-border mt-8">
+                        <div className="relative h-32 w-px bg-mist/50 mt-8">
                             <motion.div
-                                className="absolute top-0 left-0 w-full bg-foreground origin-top"
+                                className="absolute top-0 left-0 w-full bg-bronze origin-top"
                                 animate={{
-                                    height: `${((activeIndex + 1) / testimonials.length) * 100}%`,
+                                    height: `${((activeIndex + 1) / milestones.length) * 100}%`,
                                 }}
                                 transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                             />
@@ -111,8 +121,8 @@ export function Testimonial() {
                     </div>
 
                     {/* Center - main content */}
-                    <div className="flex-1 pl-16 py-12">
-                        {/* Company badge */}
+                    <div className="flex-1 md:pl-16 py-8 md:py-12">
+                        {/* Year Badge */}
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={activeIndex}
@@ -122,24 +132,24 @@ export function Testimonial() {
                                 transition={{ duration: 0.4 }}
                                 className="mb-8"
                             >
-                                <span className="inline-flex items-center gap-2 text-xs font-mono text-muted-foreground border border-border rounded-full px-3 py-1">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                                    {current.company}
+                                <span className="inline-flex items-center gap-2 text-sm font-mono text-charcoal border border-mist bg-paper/50 rounded-full px-4 py-1.5 shadow-sm">
+                                    <span className="w-2 h-2 rounded-full bg-bronze" />
+                                    {current.year}
                                 </span>
                             </motion.div>
                         </AnimatePresence>
 
-                        {/* Quote with character reveal */}
-                        <div className="relative mb-12 min-h-[140px]">
+                        {/* Description with character reveal */}
+                        <div className="relative mb-12 min-h-[160px] md:min-h-[140px]">
                             <AnimatePresence mode="wait">
-                                <motion.blockquote
+                                <motion.p
                                     key={activeIndex}
-                                    className="text-4xl md:text-5xl font-light text-foreground leading-[1.15] tracking-tight"
+                                    className="text-2xl md:text-4xl font-light text-ink leading-[1.25] tracking-tight font-headline"
                                     initial="hidden"
                                     animate="visible"
                                     exit="exit"
                                 >
-                                    {current.quote.split(" ").map((word, i) => (
+                                    {current.description.split(" ").map((word, i) => (
                                         <motion.span
                                             key={i}
                                             className="inline-block mr-[0.3em]"
@@ -165,12 +175,12 @@ export function Testimonial() {
                                             {word}
                                         </motion.span>
                                     ))}
-                                </motion.blockquote>
+                                </motion.p>
                             </AnimatePresence>
                         </div>
 
-                        {/* Author row */}
-                        <div className="flex items-end justify-between">
+                        {/* Author/Logo row */}
+                        <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-8">
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key={activeIndex}
@@ -178,19 +188,22 @@ export function Testimonial() {
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -20 }}
                                     transition={{ duration: 0.4, delay: 0.2 }}
-                                    className="flex items-center gap-4"
+                                    className="flex items-center gap-6"
                                 >
-                                    {/* Animated line before name */}
-                                    <motion.div
-                                        className="w-8 h-px bg-foreground"
-                                        initial={{ scaleX: 0 }}
-                                        animate={{ scaleX: 1 }}
-                                        transition={{ duration: 0.6, delay: 0.3 }}
-                                        style={{ originX: 0 }}
-                                    />
+                                    {/* Logo */}
+                                    <div className="relative w-16 h-16 rounded-full border border-mist bg-white p-2 flex items-center justify-center overflow-hidden shadow-sm shrink-0">
+                                        <Image
+                                            src={current.logo}
+                                            alt={current.title}
+                                            width={60}
+                                            height={60}
+                                            className="object-contain" // object-contain to ensure logos fit well
+                                        />
+                                    </div>
+
                                     <div>
-                                        <p className="text-base font-medium text-foreground">{current.author}</p>
-                                        <p className="text-sm text-muted-foreground">{current.role}</p>
+                                        <p className="text-xl font-headline text-ink">{current.title}</p>
+                                        <p className="text-sm text-graphite">{current.subtitle}</p>
                                     </div>
                                 </motion.div>
                             </AnimatePresence>
@@ -199,11 +212,11 @@ export function Testimonial() {
                             <div className="flex items-center gap-4">
                                 <motion.button
                                     onClick={goPrev}
-                                    className="group relative w-12 h-12 rounded-full border border-border flex items-center justify-center overflow-hidden"
+                                    className="group relative w-12 h-12 rounded-full border border-mist flex items-center justify-center overflow-hidden bg-paper hover:border-bronze transition-colors"
                                     whileTap={{ scale: 0.95 }}
                                 >
                                     <motion.div
-                                        className="absolute inset-0 bg-foreground"
+                                        className="absolute inset-0 bg-bronze"
                                         initial={{ x: "-100%" }}
                                         transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                                     />
@@ -212,7 +225,7 @@ export function Testimonial() {
                                         height="18"
                                         viewBox="0 0 16 16"
                                         fill="none"
-                                        className="relative z-10 text-foreground group-hover:text-foreground/30 transition-colors"
+                                        className="relative z-10 text-charcoal group-hover:text-white transition-colors"
                                     >
                                         <path
                                             d="M10 12L6 8L10 4"
@@ -226,11 +239,11 @@ export function Testimonial() {
 
                                 <motion.button
                                     onClick={goNext}
-                                    className="group relative w-12 h-12 rounded-full border border-border flex items-center justify-center overflow-hidden"
+                                    className="group relative w-12 h-12 rounded-full border border-mist flex items-center justify-center overflow-hidden bg-paper hover:border-bronze transition-colors"
                                     whileTap={{ scale: 0.95 }}
                                 >
                                     <motion.div
-                                        className="absolute inset-0 bg-foreground"
+                                        className="absolute inset-0 bg-bronze"
                                         initial={{ x: "100%" }}
                                         transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                                     />
@@ -239,7 +252,7 @@ export function Testimonial() {
                                         height="18"
                                         viewBox="0 0 16 16"
                                         fill="none"
-                                        className="relative z-10 text-foreground group-hover:text-foreground/30 transition-colors"
+                                        className="relative z-10 text-charcoal group-hover:text-white transition-colors"
                                     >
                                         <path
                                             d="M6 4L10 8L6 12"
@@ -255,21 +268,21 @@ export function Testimonial() {
                     </div>
                 </div>
 
-                {/* Bottom ticker - subtle repeating company names */}
-                <div className="absolute -bottom-20 left-0 right-0 overflow-hidden opacity-[0.08] pointer-events-none">
+                {/* Bottom ticker - subtle repeating years */}
+                <div className="absolute -bottom-20 left-0 right-0 overflow-hidden opacity-[0.05] pointer-events-none">
                     <motion.div
-                        className="flex whitespace-nowrap text-6xl font-bold tracking-tight"
+                        className="flex whitespace-nowrap text-6xl font-bold tracking-tight text-ink"
                         animate={{ x: [0, -1000] }}
-                        transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+                        transition={{ duration: 40, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
                     >
                         {[...Array(10)].map((_, i) => (
                             <span key={i} className="mx-8">
-                                {testimonials.map((t) => t.company).join(" • ")} •
+                                {milestones.map((t) => t.year).join(" • ")} •
                             </span>
                         ))}
                     </motion.div>
                 </div>
             </div>
         </div>
-    )
+    );
 }

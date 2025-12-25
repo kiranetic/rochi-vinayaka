@@ -34,7 +34,7 @@ export default function Home() {
             <div className="order-1 lg:order-2">
               <FadeIn delay={0.2}>
                 <h2 className="font-headline text-4xl md:text-5xl text-charcoal mb-8">
-                  Quietly consistent. <br /> Professionally driven.
+                  Quietly <span className="text-[#A85846]">consistent</span>. <br /> Professionally <span className="text-[#A85846]">driven</span>.
                 </h2>
                 <div className="space-y-6 text-lg text-graphite leading-relaxed font-body">
                   <p>

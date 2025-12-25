@@ -18,8 +18,8 @@ export default function ServiceCenter() {
                 />
                 <Container className="relative z-10">
                     <FadeIn>
-                        <span className="text-sm font-semibold uppercase tracking-widest text-bronze mb-4 block">Division</span>
-                        <h1 className="font-headline text-5xl md:text-6xl mb-6">Vinayaka Service Center</h1>
+                        <span className="text-sm font-semibold uppercase tracking-widest text-[#A85846] mb-4 block">Division</span>
+                        <h1 className="font-headline text-5xl md:text-6xl mb-6">Vinayaka <span className="text-[#A85846]">Service Center</span></h1>
                         <p className="text-xl md:text-2xl opacity-90 max-w-2xl">
                             The Foundation of Our Legacy Since 1987
                         </p>
