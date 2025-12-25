@@ -5,36 +5,15 @@ import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/ui/fade-in";
+import { Hero } from "@/components/home/hero";
+import { ProductCard } from "@/components/product-card";
+import popularProductsData from "@/json-data/popular_products.json";
 
 export default function Home() {
   return (
     <>
-      {/* 1. Hero Statement */}
-      <section className="min-h-screen flex items-center bg-paper relative overflow-hidden">
-        <Container>
-          <div className="flex flex-col md:flex-row md:items-center min-h-[80vh]">
-            <div className="flex-1">
-              <FadeIn>
-                <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl leading-[0.95] text-ink tracking-tight mb-8">
-                  Since 1987. <br />
-                  Built on Trust. <br />
-                  Refined Through Experience.
-                </h1>
-              </FadeIn>
-              <FadeIn delay={0.2} className="max-w-xl">
-                <p className="font-body text-lg md:text-xl text-graphite leading-relaxed">
-                  A legacy Indian enterprise delivering sewing, embroidery, and service solutions with precision, reliability, and care.
-                </p>
-                <div className="h-px bg-bronze/30 w-24 mt-8" />
-              </FadeIn>
-            </div>
-            {/* Right side is intentionally empty or could have subtle texture per design system 'Typographic Only' but layout mentions 'Left side: Headline, Right side: Photography'. 
-                However, Asset Integration says 'Hero Statement (Typographic Only) - Assets: None'.
-                I will follow Asset Integration v2 as it seems more specific/updated.
-            */}
-          </div>
-        </Container>
-      </section>
+      {/* 1. Hero Statement with Lamp Effect */}
+      <Hero />
 
       {/* 2. The Origin (Intro) */}
       <Section background="stone">
@@ -46,7 +25,7 @@ export default function Home() {
                   src="/assets/picture/precision-sewing.jpg"
                   alt="Precision Sewing"
                   fill
-                  className="object-cover transition-all duration-700 grayscale group-hover:grayscale-0 scale-100 group-hover:scale-105"
+                  className="object-cover img-hero-bw"
                 />
               </div>
               <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-steel">Foundation of Operations, Bengaluru</p>
@@ -67,7 +46,7 @@ export default function Home() {
                 </div>
                 <div className="mt-8">
                   <Link href="/about">
-                    <Button variant="link" className="pl-0">Read Our Story <MoveRight className="ml-2 w-4 h-4" /></Button>
+                    <Button variant="link" className="pl-0 text-bronze hover:text-bronze/80">Read Our Story <MoveRight className="ml-2 w-4 h-4" /></Button>
                   </Link>
                 </div>
               </FadeIn>
@@ -76,8 +55,32 @@ export default function Home() {
         </Container>
       </Section>
 
-      {/* 3. The Tri-Vertical System */}
-      <Section id="divisions" background="paper" className="!p-0 !py-0">
+      {/* 3. Popular Products */}
+      <Section background="paper">
+        <Container>
+          <FadeIn className="text-center mb-16">
+            <h2 className="font-headline text-4xl md:text-5xl text-ink mb-6">Popular Products</h2>
+            <p className="text-graphite text-lg max-w-2xl mx-auto">
+              Curated selections from our domestic and embroidery ranges.
+            </p>
+          </FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {popularProductsData.products.slice(0, 6).map((product, index) => (
+              <FadeIn key={product.id} delay={index * 0.1}>
+                <ProductCard product={product} />
+              </FadeIn>
+            ))}
+          </div>
+          <div className="mt-12 text-center">
+            <Link href="/products">
+              <Button variant="outline" className="border-mist text-ink hover:bg-stone">View All Products</Button>
+            </Link>
+          </div>
+        </Container>
+      </Section>
+
+      {/* 4. The Tri-Vertical System */}
+      <Section id="divisions" background="stone" className="!p-0 !py-0">
         <div className="grid grid-cols-1 lg:grid-cols-3 min-h-[80vh]">
           {/* Division 1: Overseas */}
           <Link href="/divisions/overseas" className="group relative border-r border-mist last:border-0 min-h-[50vh] lg:min-h-auto block overflow-hidden">
@@ -87,7 +90,7 @@ export default function Home() {
                 src="/assets/picture/accessories-storage.jpg"
                 alt="Vinayaka Overseas"
                 fill
-                className="object-cover grayscale group-hover:scale-105 transition-transform duration-1000"
+                className="object-cover img-warm-tone"
               />
               <div className="absolute inset-0 bg-white/80 group-hover:bg-transparent transition-colors duration-500" />
             </div>
@@ -112,7 +115,7 @@ export default function Home() {
                 src="/assets/picture/production-line.jpg"
                 alt="Vinayaka Embroidery World"
                 fill
-                className="object-cover grayscale group-hover:scale-105 transition-transform duration-1000"
+                className="object-cover img-warm-tone"
               />
               <div className="absolute inset-0 bg-white/80 group-hover:bg-transparent transition-colors duration-500" />
             </div>
@@ -137,7 +140,7 @@ export default function Home() {
                 src="/assets/picture/precision-sewing.jpg"
                 alt="Vinayaka Service Center"
                 fill
-                className="object-cover object-left grayscale group-hover:scale-105 transition-transform duration-1000"
+                className="object-cover object-left img-warm-tone"
               />
               <div className="absolute inset-0 bg-white/80 group-hover:bg-transparent transition-colors duration-500" />
             </div>
@@ -156,8 +159,8 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* 4. Philosophy */}
-      <Section background="stone">
+      {/* 5. Philosophy */}
+      <Section background="paper">
         <Container size="sm">
           <FadeIn className="text-center">
             <h2 className="font-headline text-3xl md:text-4xl text-charcoal mb-12">Why Clients Stay With Us</h2>
@@ -171,8 +174,8 @@ export default function Home() {
         </Container>
       </Section>
 
-      {/* 5. Trusted By */}
-      <Section background="paper">
+      {/* 6. Trusted By */}
+      <Section background="stone">
         <Container>
           <FadeIn className="text-center">
             <h3 className="uppercase tracking-widest text-sm font-semibold text-steel mb-8">Trusted by Established Businesses</h3>
@@ -183,7 +186,7 @@ export default function Home() {
         </Container>
       </Section>
 
-      {/* 6. CTA */}
+      {/* 7. CTA */}
       <Section background="slate" className="text-center">
         <Container>
           <FadeIn>
@@ -192,7 +195,7 @@ export default function Home() {
               Whether you are evaluating machines, planning expansion, or seeking dependable service, our team is here to guide you with clarity and experience.
             </p>
             <Link href="/contact">
-              <Button size="lg">Connect with Vinayaka Groups</Button>
+              <Button size="lg" className="bg-rust text-stone hover:bg-rust/90 border-0">Connect with Vinayaka Groups</Button>
             </Link>
           </FadeIn>
         </Container>
@@ -200,3 +203,4 @@ export default function Home() {
     </>
   );
 }
+

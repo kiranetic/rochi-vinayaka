@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { ShieldCheck, Gem, Handshake, Cpu } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
@@ -17,6 +18,7 @@ const timelineEvents = [
     { year: "2009", title: "Showroom", desc: "Opening of a multi-brand showroom in BTM Layout, Bengaluru." },
     { year: "2019", title: "Specialization", desc: "Formation of Vinayaka Embroidery World, a dedicated embroidery technology division." },
 ];
+
 
 export default function About() {
     return (
@@ -94,14 +96,16 @@ export default function About() {
                         <h2 className="font-headline text-4xl text-charcoal mb-16">What Guides Us</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
                             {[
-                                "Trust is built through consistency",
-                                "Quality must be experienced, not promised",
-                                "Relationships matter more than transactions",
-                                "Modern systems should respect traditional values"
-                            ].map((belief, i) => (
-                                <div key={i} className="flex gap-6 items-start">
-                                    <span className="font-headline text-6xl text-mist leading-none select-none">{i + 1}</span>
-                                    <p className="text-xl md:text-2xl text-charcoal font-medium pt-2">{belief}</p>
+                                { text: "Trust is built through consistency", icon: ShieldCheck },
+                                { text: "Quality must be experienced, not promised", icon: Gem },
+                                { text: "Relationships matter more than transactions", icon: Handshake },
+                                { text: "Modern systems should respect traditional values", icon: Cpu }
+                            ].map((item, i) => (
+                                <div key={i} className="flex gap-6 items-start group">
+                                    <div className="p-3 rounded-full bg-stone border border-mist group-hover:border-bronze transition-colors duration-300">
+                                        <item.icon className="w-8 h-8 text-graphite group-hover:text-bronze transition-colors duration-300" strokeWidth={1.5} />
+                                    </div>
+                                    <p className="text-xl md:text-2xl text-charcoal font-medium pt-2">{item.text}</p>
                                 </div>
                             ))}
                         </div>

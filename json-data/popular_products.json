@@ -1,0 +1,35 @@
+{
+  "products": [
+    {
+      "id": "dom-uj-14",
+      "name": "USHA JANOME SKYLINE S9",                                                                                                                                
+      "image": "./assets/images/products/domestic/usha-janome/skyline-s9.jpg"
+    },
+    {
+      "id": "dom-uj-15",
+      "name": "USHA JANOME MEMORY CRAFT 6700P",                                                                                                                        
+      "image": "./assets/images/products/domestic/usha-janome/memory-craft-6700p.jpg"
+    },
+    {
+      "id": "dom-singer-6",
+      "name": "SINGER HEAVY DUTY 4423",                                                                                                                           
+      "image": "./assets/images/products/domestic/singer/heavy-duty-4423.jpg"
+    },
+    {
+      "id": "dom-brother-12",
+      "name": "BROTHER INNOV-IS A150",                                                                                                                             
+      "image": "./assets/images/products/domestic/brother/innov-is-a150.jpg"
+    },
+    {
+      "id": "emb-uj-2",
+      "name": "USHA JANOME MC 550E",                                                                                                                                   
+      "image": "./assets/images/products/embroidery/usha-janome/mc-550e.jpg"
+    },
+    {
+      "id": "emb-kasuti-1",
+      "name": "KASUTI 1201",
+      "image": "./assets/images/products/embroidery/kasuti/1201.jpg"
+    }
+  ]
+}
+

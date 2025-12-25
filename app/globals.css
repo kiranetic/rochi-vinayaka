@@ -2,23 +2,36 @@
 
 :root {
   /* Surfaces */
-  --color-paper: #FDFBF7;
-  --color-stone: #F5F3EF;
+  --color-paper: #FEFBE6;
+  /* Ivory */
+  --color-stone: #F5F0E8;
+  /* Warm Stone */
   --color-slate: #1A1D23;
+  /* Deep Slate */
 
   /* Text */
-  --color-ink: #1E1E1E; /* Headings H1/H2 */
-  --color-charcoal: #2B2B2B; /* Headings H3, Emphasis */
-  --color-graphite: #3D3D3D; /* Body */
-  --color-steel: #6B6B6B; /* Captions, Metadata */
-  --color-whisper: #AFAFAF; /* Disabled */
+  --color-ink: #533724;
+  /* Deep Walnut - H1, H2 */
+  --color-charcoal: #2B2B2B;
+  /* Graphite - H3, H4, Emphasis */
+  --color-graphite: #6B6B6B;
+  /* Steel Grey - Body */
+  --color-steel: #D9D7D3;
+  /* Mist Grey - Captions */
+
+  /* Additional Functional Colors matching intent */
+  --color-whisper: #E5E5E5;
+  /* Disabled placeholder */
 
   /* Structural */
-  --color-mist: #D9D7D3; /* Borders */
+  --color-mist: #D4C8B8;
+  /* Sandstone - Borders */
 
   /* Accent */
   --color-bronze: #8C7356;
-  --color-bronze-light: #A68968;
+  /* Faded Copper - Interactions */
+  --color-rust: #A85846;
+  /* Terracotta Rust - CTAs */
 }
 
 @theme inline {
@@ -32,7 +45,7 @@
   --color-whisper: var(--color-whisper);
   --color-mist: var(--color-mist);
   --color-bronze: var(--color-bronze);
-  --color-bronze-light: var(--color-bronze-light);
+  --color-rust: var(--color-rust);
 
   --font-headline: var(--font-cormorant), serif;
   --font-body: var(--font-inter), sans-serif;
@@ -47,4 +60,27 @@ body {
 /* Custom Utilities */
 .text-balance {
   text-wrap: balance;
+}
+
+/* Image Treatment: Normal Color -> Enhanced on Hover */
+.img-warm-tone {
+  filter: contrast(100%);
+  transition: all 0.7s ease-out;
+}
+
+.group:hover .img-warm-tone,
+.img-warm-tone:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+/* Hero B&W treatment */
+.img-hero-bw {
+  filter: grayscale(100%);
+  transition: all 1s ease-out;
+}
+
+.group:hover .img-hero-bw {
+  filter: grayscale(0%);
+  transform: scale(1.05);
 }

@@ -48,9 +48,13 @@ export function Footer() {
                         <h4 className="uppercase tracking-widest text-white font-semibold text-xs">Visit Us</h4>
                         <address className="not-italic space-y-2 leading-relaxed">
                             <p>Vinayaka Groups</p>
-                            <p>Bengaluru, Karnataka</p>
-                            <p className="text-bronze pt-2">+91 99999 99999</p> {/* Placeholder, will start from Env */}
-                            <p className="hover:text-white transition-colors cursor-pointer">info@vinayakagroups.com</p>
+                            <p>BTM Layout, 2nd Stage,</p>
+                            <p>Bengaluru, Karnataka - 560076</p>
+                            <div className="pt-2 text-bronze space-y-1">
+                                <p>(+91) 98451 89492</p>
+                                <p>(+91) 96065 00492</p>
+                            </div>
+                            <p className="hover:text-white transition-colors cursor-pointer pt-2">vinayaka-groups@gmail.com</p>
                         </address>
                     </div>
                 </div>

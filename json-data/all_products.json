@@ -1,0 +1,445 @@
+{
+  "products": [
+    {
+      "id": "dom-uj-1",
+      "name": "MARVELA",
+      "brand": "USHA JANOME",
+      "category": "domestic",
+      "description": "Compact and portable sewing machine with 7 stitches, ideal for beginners and home quilting projects.",
+      "image": "./assets/images/products/domestic/usha-janome/marvela.jpg"
+    },
+    {
+      "id": "dom-uj-2",
+      "name": "ALLURE DLX",
+      "brand": "USHA JANOME",
+      "category": "domestic",
+      "description": "Deluxe version with auto needle threading, LED light, and triple-strength stitch capability for smooth sewing.",
+      "image": "./assets/images/products/domestic/usha-janome/allure-dlx.jpg"
+    },
+    {
+      "id": "dom-uj-3",
+      "name": "EXCELLA DLX",
+      "brand": "USHA JANOME",
+      "category": "domestic",
+      "description": "Stylish machine featuring auto needle threading, LED light, 13 stitches, and embroidery-friendly feed drop lever.",
+      "image": "./assets/images/products/domestic/usha-janome/excella-dlx.jpg"
+    },
+    {
+      "id": "dom-uj-4",
+      "name": "MY FAB BARBIE",
+      "brand": "USHA JANOME",
+      "category": "domestic",
+      "description": "Fun sewing machine for young creators, includes Barbie kit, 13 stitches, and accessories for creative projects.",
+      "image": "./assets/images/products/domestic/usha-janome/my-fab-barbie.jpg"
+    },
+    {
+      "id": "dom-uj-5",
+      "name": "STITCH QUEEN",
+      "brand": "USHA JANOME",
+      "category": "domestic",
+      "description": "Flat-bed zigzag machine with two stitches, seven applications, and optional treadle use for manual operation.",
+      "image": "./assets/images/products/domestic/usha-janome/stitch-queen.jpg"
+    },
+    {
+      "id": "dom-uj-6",
+      "name": "WONDER STITCH",
+      "brand": "USHA JANOME",
+      "category": "domestic",
+      "description": "Elegant machine with auto threading, embroidery feed drop, and 13 stitches for versatile sewing applications.",
+      "image": "./assets/images/products/domestic/usha-janome/wonder-stitch.jpg"
+    },
+    {
+      "id": "dom-uj-7",
+      "name": "WONDER STITCH PLUS",
+      "brand": "USHA JANOME",
+      "category": "domestic",
+      "description": "Upgraded version with 23 stitches, 3 dials, and specialized feet for fine edge stitching and hemming.",
+      "image": "./assets/images/products/domestic/usha-janome/wonder-stitch-plus.jpg"
+    },
+    {
+      "id": "dom-uj-8",
+      "name": "STITCH MAGIC",
+      "brand": "USHA JANOME",
+      "category": "domestic",
+      "description": "Durable aluminum body machine with 23 stitches, auto needle threading, and adjustable presser foot control.",
+      "image": "./assets/images/products/domestic/usha-janome/stitch-magic.jpg"
+    },
+    {
+      "id": "dom-uj-9",
+      "name": "SEW MAGIC",
+      "brand": "USHA JANOME",
+      "category": "domestic",
+      "description": "Computerized machine with 30 stitches, speed control, and convenience buttons for effortless creative sewing.",
+      "image": "./assets/images/products/domestic/usha-janome/sew-magic.jpg"
+    },
+    {
+      "id": "dom-uj-10",
+      "name": "DREAM MAKER 120",
+      "brand": "USHA JANOME",
+      "category": "domestic",
+      "description": "Computerized sewing machine with 120 stitch designs, memory function, LCD screen, and automatic thread cutter.",
+      "image": "./assets/images/products/domestic/usha-janome/dream-maker-120.jpg"
+    },
+    {
+      "id": "dom-uj-11",
+      "name": "QUILT MAGIC",
+      "brand": "USHA JANOME",
+      "category": "domestic",
+      "description": "Perfect quilting machine with 300 stitches, auto needle threader, and memory function for custom patterns.",
+      "image": "./assets/images/products/domestic/usha-janome/quilt-magic.jpg"
+    },
+    {
+      "id": "dom-uj-12",
+      "name": "MEMORY CRAFT 450E",
+      "brand": "USHA JANOME",
+      "category": "domestic",
+      "description": "Efficient embroidery machine with 860 spm speed, large hoops, and software for custom design editing.",
+      "image": "./assets/images/products/domestic/usha-janome/memory-craft-450e.jpg"
+    },
+    {
+      "id": "dom-uj-13",
+      "name": "MEMORY CRAFT 550E",
+      "brand": "USHA JANOME",
+      "category": "domestic",
+      "description": "Hi-tech embroidery machine with 180 designs, 6 fonts, and onboard editing for boutique-style creations.",
+      "image": "./assets/images/products/domestic/usha-janome/memory-craft-550e.jpg"
+    },
+    {
+      "id": "dom-uj-14",
+      "name": "SKYLINE S9",
+      "brand": "USHA JANOME",
+      "category": "domestic",
+      "description": "Advanced Wi-Fi enabled sewing and embroidery machine with LCD screen and artistic digitizer software.",
+      "image": "./assets/images/products/domestic/usha-janome/skyline-s9.jpg"
+    },
+    {
+      "id": "dom-uj-15",
+      "name": "MEMORY CRAFT 6700P",
+      "brand": "USHA JANOME",
+      "category": "domestic",
+      "description": "Professional-grade sewing and quilting machine with 200 stitches, AccuFeed Flex, and wide workspace.",
+      "image": "./assets/images/products/domestic/usha-janome/memory-craft-6700p.jpg"
+    },
+    {
+      "id": "dom-singer-1",
+      "name": "FM 1304",
+      "brand": "SINGER",
+      "category": "domestic",
+      "description": "Beginner-friendly sewing machine with 6 stitches, twin-needle capability, LED light, and durable metal frame.",
+      "image": "./assets/images/products/domestic/singer/fm-1304.jpg"
+    },
+    {
+      "id": "dom-singer-2",
+      "name": "FM 8280",
+      "brand": "SINGER",
+      "category": "domestic",
+      "description": "Electric sewing machine with 24 stitches, auto needle threader, LED light, and 70W motor for lasting performance.",
+      "image": "./assets/images/products/domestic/singer/fm-8280.jpg"
+    },
+    {
+      "id": "dom-singer-3",
+      "name": "M 2605",
+      "brand": "SINGER",
+      "category": "domestic",
+      "description": "Lightweight machine with 21 stitch patterns, auto needle threader, and adjustable stitch length and width.",
+      "image": "./assets/images/products/domestic/singer/m-2605.jpg"
+    },
+    {
+      "id": "dom-singer-4",
+      "name": "M 3305",
+      "brand": "SINGER",
+      "category": "domestic",
+      "description": "Versatile sewing machine with 23 stitches, stretch options, front-loading bobbin, and adjustable stitch controls.",
+      "image": "./assets/images/products/domestic/singer/m-3305.jpg"
+    },
+    {
+      "id": "dom-singer-5",
+      "name": "M 3505",
+      "brand": "SINGER",
+      "category": "domestic",
+      "description": "All-purpose machine with 32 stitches, one-step buttonhole, auto threader, and free arm for easy sewing.",
+      "image": "./assets/images/products/domestic/singer/m-3505.jpg"
+    },
+    {
+      "id": "dom-singer-6",
+      "name": "HEAVY DUTY 4423",
+      "brand": "SINGER",
+      "category": "domestic",
+      "description": "Powerful heavy-duty sewing machine for thick fabrics with 97 stitch options and high-speed motor.",
+      "image": "./assets/images/products/domestic/singer/heavy-duty-4423.jpg"
+    },
+    {
+      "id": "dom-singer-7",
+      "name": "C5605",
+      "brand": "SINGER",
+      "category": "domestic",
+      "description": "Electronic sewing machine with 80 stitches, LCD screen, 6 buttonholes, and auto needle threader for convenience.",
+      "image": "./assets/images/products/domestic/singer/c5605.jpg"
+    },
+    {
+      "id": "dom-singer-8",
+      "name": "C5205",
+      "brand": "SINGER",
+      "category": "domestic",
+      "description": "Computerized sewing machine with 80 stitches, LCD display, auto threader, and strong metal frame for reliability.",
+      "image": "./assets/images/products/domestic/singer/c5205.jpg"
+    },
+    {
+      "id": "dom-brother-1",
+      "name": "JA 20",
+      "brand": "BROTHER",
+      "category": "domestic",
+      "description": "Compact, beginner-friendly sewing machine with 3 stitches, LED light, and lightweight design for easy portability.",
+      "image": "./assets/images/products/domestic/brother/ja-20.jpg"
+    },
+    {
+      "id": "dom-brother-2",
+      "name": "JA 1400",
+      "brand": "BROTHER",
+      "category": "domestic",
+      "description": "Easy-to-use sewing machine with 14 stitches, LED light, and free arm—ideal for beginners and home projects.",
+      "image": "./assets/images/products/domestic/brother/ja-1400.jpg"
+    },
+    {
+      "id": "dom-brother-3",
+      "name": "JK17B",
+      "brand": "BROTHER",
+      "category": "domestic",
+      "description": "Versatile machine with 17 stitches, quick-set bobbin, and LED lighting—great for beginners and experienced sewers.",
+      "image": "./assets/images/products/domestic/brother/jk17b.jpg"
+    },
+    {
+      "id": "dom-brother-4",
+      "name": "GS1700",
+      "brand": "BROTHER",
+      "category": "domestic",
+      "description": "Lightweight sewing machine with 17 stitches, LED light, and reverse sewing—perfect for beginners and casual users.",
+      "image": "./assets/images/products/domestic/brother/gs1700.jpg"
+    },
+    {
+      "id": "dom-brother-5",
+      "name": "GS2700",
+      "brand": "BROTHER",
+      "category": "domestic",
+      "description": "User-friendly sewing machine with 27 stitches, auto needle threader, and 850 SPM speed for smooth stitching.",
+      "image": "./assets/images/products/domestic/brother/gs2700.jpg"
+    },
+    {
+      "id": "dom-brother-6",
+      "name": "LX27NT",
+      "brand": "BROTHER",
+      "category": "domestic",
+      "description": "Durable electric machine with 27 stitches, metal frame, LED lighting, and adjustable tension for precision sewing.",
+      "image": "./assets/images/products/domestic/brother/lx27nt.jpg"
+    },
+    {
+      "id": "dom-brother-7",
+      "name": "GS3700",
+      "brand": "BROTHER",
+      "category": "domestic",
+      "description": "Reliable machine with 37 stitches, quick-set bobbin, LED lighting, and sturdy build for versatile sewing tasks.",
+      "image": "./assets/images/products/domestic/brother/gs3700.jpg"
+    },
+    {
+      "id": "dom-brother-8",
+      "name": "GS3710",
+      "brand": "BROTHER",
+      "category": "domestic",
+      "description": "Feature-rich machine with 37 stitches, one-step buttonhole, LED light, and durable metal frame construction.",
+      "image": "./assets/images/products/domestic/brother/gs3710.jpg"
+    },
+    {
+      "id": "dom-brother-9",
+      "name": "GS3750 WT",
+      "brand": "BROTHER",
+      "category": "domestic",
+      "description": "Mechanical sewing machine with 37 stitches, LED lighting, quick-set bobbin, and adjustable stitch controls.",
+      "image": "./assets/images/products/domestic/brother/gs3750-wt.jpg"
+    },
+    {
+      "id": "dom-brother-10",
+      "name": "FS101",
+      "brand": "BROTHER",
+      "category": "domestic",
+      "description": "Computerized sewing machine with 100 stitches, LCD display, start/stop button, and 850 SPM sewing speed.",
+      "image": "./assets/images/products/domestic/brother/fs101.jpg"
+    },
+    {
+      "id": "dom-brother-11",
+      "name": "DS1300",
+      "brand": "BROTHER",
+      "category": "domestic",
+      "description": "Advanced computerized machine with 130 stitches, LCD screen, 850 SPM speed, and compact, durable design.",
+      "image": "./assets/images/products/domestic/brother/ds1300.jpg"
+    },
+    {
+      "id": "dom-brother-12",
+      "name": "INNOV-IS A150",
+      "brand": "BROTHER",
+      "category": "domestic",
+      "description": "High-end computerized machine with 150 stitches, 10 buttonholes, LCD screen, and auto needle threading system.",
+      "image": "./assets/images/products/domestic/brother/innov-is-a150.jpg"
+    },
+    {
+      "id": "ind-usha-1",
+      "name": "S2",
+      "brand": "USHA",
+      "category": "industrial",
+      "description": "High-speed direct drive lockstitch machine with 5000 SPM, durable motor, and smooth operation for heavy fabrics.",
+      "image": "./assets/images/products/industrial/usha/s2.jpg"
+    },
+    {
+      "id": "ind-singer-1",
+      "name": "9900",
+      "brand": "SINGER",
+      "category": "industrial",
+      "description": "Computerized lockstitch machine with 5500 SPM, automatic lubrication, and adjustable stitch controls for professional results.",
+      "image": "./assets/images/products/industrial/singer/9900.jpg"
+    },
+    {
+      "id": "ind-singer-2",
+      "name": "9900-T",
+      "brand": "SINGER",
+      "category": "industrial",
+      "description": "Advanced automatic thread trimming machine with LCD panel, speed control, and consistent performance on various fabrics.",
+      "image": "./assets/images/products/industrial/singer/9900t.jpg"
+    },
+    {
+      "id": "ind-singer-3",
+      "name": "9900-H",
+      "brand": "SINGER",
+      "category": "industrial",
+      "description": "Heavy-duty lockstitch machine for leather and denim, 3500 SPM speed, and fully automatic lubrication system.",
+      "image": "./assets/images/products/industrial/singer/9900h.jpg"
+    },
+    {
+      "id": "ind-singer-4",
+      "name": "S0303",
+      "brand": "SINGER",
+      "category": "industrial",
+      "description": "Heavy-duty top and bottom feed lockstitch machine with direct drive motor for precise stitching on thick materials.",
+      "image": "./assets/images/products/industrial/singer/s0303.jpg"
+    },
+    {
+      "id": "ind-singer-5",
+      "name": "S8150",
+      "brand": "SINGER",
+      "category": "industrial",
+      "description": "High-speed 5-thread overlock machine with energy-saving motor and clean professional seam finishing for garments.",
+      "image": "./assets/images/products/industrial/singer/s8150.jpg"
+    },
+    {
+      "id": "ind-jack-1",
+      "name": "F5",
+      "brand": "JACK",
+      "category": "industrial",
+      "description": "Energy-efficient lockstitch machine with direct drive motor, LED light, and smooth stitching for all fabric types.",
+      "image": "./assets/images/products/industrial/jack/f5.jpg"
+    },
+    {
+      "id": "ind-jack-2",
+      "name": "A2C",
+      "brand": "JACK",
+      "category": "industrial",
+      "description": "Automatic thread trimming sewing machine with high torque motor, smart panel, and quiet, precise stitching performance.",
+      "image": "./assets/images/products/industrial/jack/a2c.jpg"
+    },
+    {
+      "id": "ind-jack-3",
+      "name": "A4B",
+      "brand": "JACK",
+      "category": "industrial",
+      "description": "Fully automatic lockstitch machine with direct drive motor, thread cutter, and foot lifter for efficient production.",
+      "image": "./assets/images/products/industrial/jack/a4b.jpg"
+    },
+    {
+      "id": "ind-jack-4",
+      "name": "E4S-4-M03/333",
+      "brand": "JACK",
+      "category": "industrial",
+      "description": "4-thread direct drive overlock machine with energy-saving motor and adjustable feed for light to heavy fabrics.",
+      "image": "./assets/images/products/industrial/jack/e4s4m03-333.jpg"
+    },
+    {
+      "id": "ind-juki-1",
+      "name": "DDL 7000AS7NBK-AA",
+      "brand": "JUKI",
+      "category": "industrial",
+      "description": "Direct-drive lockstitch machine with automatic thread trimmer and 35mm needle stroke for diverse fabric types.",
+      "image": "./assets/images/products/industrial/juki/ddl7000as7nbk.jpg"
+    },
+    {
+      "id": "ind-juki-2",
+      "name": "LU 1510N",
+      "brand": "JUKI",
+      "category": "industrial",
+      "description": "Unison-feed lockstitch machine with rectangular feeding motion ensuring consistent stitching on medium to heavy fabrics.",
+      "image": "./assets/images/products/industrial/juki/lu1510n.jpg"
+    },
+    {
+      "id": "ind-juki-3",
+      "name": "LU 1560 NKA",
+      "brand": "JUKI",
+      "category": "industrial",
+      "description": "Double-capacity hook lockstitch machine designed for leather, upholstery, and heavy-duty industrial stitching applications.",
+      "image": "./assets/images/products/industrial/juki/lu1560nka.jpg"
+    },
+    {
+      "id": "ind-juki-4",
+      "name": "LU 2810 SS",
+      "brand": "JUKI",
+      "category": "industrial",
+      "description": "Semi-dry unison feed lockstitch machine ideal for heavy materials like leather, canvas, and upholstery fabrics.",
+      "image": "./assets/images/products/industrial/juki/lu2810ss.jpg"
+    },
+    {
+      "id": "emb-uj-1",
+      "name": "MC 450E",
+      "brand": "USHA JANOME",
+      "category": "embroidery",
+      "description": "Fully computerized embroidery machine with 860 SPM speed, 13cm LCD touch screen, and adjustable hoops for large projects.",
+      "image": "./assets/images/products/embroidery/usha-janome/mc-450e.jpg"
+    },
+    {
+      "id": "emb-uj-2",
+      "name": "MC 550E",
+      "brand": "USHA JANOME",
+      "category": "embroidery",
+      "description": "Hi-tech embroidery machine with 180 built-in designs, 6 fonts, 860 SPM speed, and user-friendly touchscreen editing interface.",
+      "image": "./assets/images/products/embroidery/usha-janome/mc-550e.jpg"
+    },
+    {
+      "id": "emb-kasuti-1",
+      "name": "1201",
+      "brand": "KASUTI",
+      "category": "embroidery",
+      "description": "Proudly in-house built 12-needle industrial embroidery machine delivering superior precision, durability, and high-speed performance for professionals.",
+      "image": "./assets/images/products/embroidery/kasuti/1201.jpg"
+    },
+    {
+      "id": "emb-ricoma-1",
+      "name": "SWD-1501-10S",
+      "brand": "RICOMA",
+      "category": "embroidery",
+      "description": "15-needle industrial embroidery machine with extra-large area, LCD touchscreen, and precision stitching for caps and garments.",
+      "image": "./assets/images/products/embroidery/ricoma/swd-1501-10s.jpg"
+    },
+    {
+      "id": "emb-ricoma-2",
+      "name": "SWD-1501-8S",
+      "brand": "RICOMA",
+      "category": "embroidery",
+      "description": "Commercial embroidery machine with 15 needles, extra-wide area, and intuitive control panel for multi-color professional designs.",
+      "image": "./assets/images/products/embroidery/ricoma/swd-1501-8s.jpg"
+    },
+    {
+      "id": "emb-ricoma-3",
+      "name": "SWD-2001-10S",
+      "brand": "RICOMA",
+      "category": "embroidery",
+      "description": "High-performance embroidery machine with 1,200 SPM speed, 10.1\" HD touchscreen, and wide-angle cap system for large designs.",
+      "image": "./assets/images/products/embroidery/ricoma/swd-2001-10s.jpg"
+    }
+  ]
+}
+

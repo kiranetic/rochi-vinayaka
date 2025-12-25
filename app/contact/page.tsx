@@ -26,17 +26,17 @@ export default function Contact() {
                             <div>
                                 <h3 className="text-sm font-semibold uppercase tracking-widest text-steel mb-4">Visit Us</h3>
                                 <address className="not-italic font-headline text-3xl text-charcoal leading-snug">
-                                    Vinayaka Groups <br />
-                                    Bengaluru, Karnataka
+                                    BTM Layout, 2nd Stage, <br />
+                                    Bengaluru, Karnataka - 560076
                                 </address>
                                 <p className="text-graphite mt-2">Serving clients across India</p>
                             </div>
 
                             <div>
-                                <h3 className="text-sm font-semibold uppercase tracking-widest text-steel mb-4">Reach Us</h3>
+                                <h3 className="text-sm font-semibold uppercase tracking-widest text-steel mb-4">Reach Us_</h3>
                                 <div className="space-y-2 text-lg text-charcoal">
-                                    <p><span className="text-bronze mr-4">P</span> +91 99999 99999</p>
-                                    <p><span className="text-bronze mr-4">E</span> info@vinayakagroups.com</p>
+                                    <p><span className="text-bronze mr-4">P</span> (+91) 98451 89492 / 96065 00492</p>
+                                    <p><span className="text-bronze mr-4">E</span> vinayaka-groups@gmail.com</p>
                                 </div>
                             </div>
 
