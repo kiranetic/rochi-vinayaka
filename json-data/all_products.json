@@ -423,23 +423,6 @@
       "category": "embroidery",
       "description": "15-needle industrial embroidery machine with extra-large area, LCD touchscreen, and precision stitching for caps and garments.",
       "image": "./assets/images/products/embroidery/ricoma/swd-1501-10s.jpg"
-    },
-    {
-      "id": "emb-ricoma-2",
-      "name": "SWD-1501-8S",
-      "brand": "RICOMA",
-      "category": "embroidery",
-      "description": "Commercial embroidery machine with 15 needles, extra-wide area, and intuitive control panel for multi-color professional designs.",
-      "image": "./assets/images/products/embroidery/ricoma/swd-1501-8s.jpg"
-    },
-    {
-      "id": "emb-ricoma-3",
-      "name": "SWD-2001-10S",
-      "brand": "RICOMA",
-      "category": "embroidery",
-      "description": "High-performance embroidery machine with 1,200 SPM speed, 10.1\" HD touchscreen, and wide-angle cap system for large designs.",
-      "image": "./assets/images/products/embroidery/ricoma/swd-2001-10s.jpg"
     }
   ]
 }
-
