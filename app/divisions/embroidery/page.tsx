@@ -11,7 +11,7 @@ export default function Embroidery() {
             {/* Hero */}
             <section className="relative h-[60vh] flex items-center bg-slate text-paper overflow-hidden">
                 <Image
-                    src="/assets/picture/work-in-progress.jpg" // Using embroidery usage shot
+                    src="/assets/picture/work-in-progress.jpg"
                     alt="Embroidery Work"
                     fill
                     className="object-cover opacity-40 grayscale"
@@ -37,61 +37,185 @@ export default function Embroidery() {
                 </Container>
             </section>
 
-            {/* Specialization */}
-            <Section>
+            {/* Facility Showcase (Store Front) */}
+            <Section background="stone" className="py-24">
                 <Container>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                        <FadeIn className="order-2 lg:order-1 relative aspect-square lg:aspect-auto bg-stone">
-                            <Image
-                                src="/assets/picture/active-stitching-process.jpg"
-                                alt="Active Stitching"
-                                fill
-                                className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                            />
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                        <FadeIn>
+                            <div className="relative aspect-[5/4] rounded-sm overflow-hidden shadow-xl border border-white/50">
+                                <Image
+                                    src="/assets/picture/vinayaka-embroidery-world-facility-view.jpg"
+                                    alt="Vinayaka Embroidery Facility"
+                                    fill
+                                    className="object-cover hover:scale-105 transition-transform duration-1000"
+                                />
+                            </div>
                         </FadeIn>
-                        <FadeIn className="order-1 lg:order-2">
-                            <h2 className="font-headline text-3xl text-charcoal mb-8">Our Specialization</h2>
-                            <p className="text-lg text-graphite mb-8">
-                                We focus exclusively on computerized embroidery systems – supporting designers, boutiques, manufacturers, and production units across India.
+                        <FadeIn delay={0.2} className="flex flex-col justify-center">
+                            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#A85846] mb-4">Innovation Hub</span>
+                            <h2 className="font-headline text-3xl md:text-5xl text-charcoal mb-6 leading-tight">
+                                Where Innovation Threads Through Design.
+                            </h2>
+                            <p className="text-lg text-graphite mb-8 leading-relaxed max-w-lg">
+                                Use our facility to push the boundaries of what's possible. From delicate boutique patterns to high-volume industrial runs, simulate your production environment before you invest.
                             </p>
-                            <ul className="space-y-6">
-                                {[
-                                    "Single-head embroidery machines for detailed work",
-                                    "Multi-head systems for production environments",
-                                    "Cording and specialty embroidery solutions",
-                                    "In-house Vinayaka models and curated brands",
-                                    "Training, installation, and technical support"
-                                ].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-4 text-lg text-graphite border-b border-mist pb-4 last:border-0">
-                                        <span className="w-1.5 h-1.5 bg-bronze rounded-full mt-2.5" />
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
+
+                            <div className="grid grid-cols-2 gap-8 border-t border-stone-200 pt-8 max-w-lg">
+                                <div>
+                                    <h4 className="font-headline text-lg text-charcoal mb-2">Technical Training</h4>
+                                    <p className="text-stone-darker text-sm leading-relaxed">
+                                        Master the software and mechanics with our expert-led sessions.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 className="font-headline text-lg text-charcoal mb-2">Pattern Digitizing</h4>
+                                    <p className="text-stone-darker text-sm leading-relaxed">
+                                        Optimize your designs for flawless machine execution.
+                                    </p>
+                                </div>
+                            </div>
                         </FadeIn>
                     </div>
                 </Container>
             </Section>
 
-            {/* Reliability & Trusted By */}
-            <Section background="stone">
+            {/* Featured Categories */}
+            <Section>
                 <Container>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-                        <FadeIn>
-                            <h3 className="font-headline text-2xl text-charcoal mb-4">Built for Reliability</h3>
-                            <p className="text-graphite leading-relaxed">
-                                Every embroidery machine is evaluated for stitch accuracy, software stability, and service access. Backed by the wider Vinayaka service infrastructure, clients benefit from continuity beyond installation.
-                            </p>
-                        </FadeIn>
-                        <FadeIn delay={0.2}>
-                            <h3 className="font-headline text-2xl text-charcoal mb-4">Trusted by Professionals</h3>
-                            <p className="text-graphite leading-relaxed">
-                                Fashion houses, creative studios, and manufacturing units rely on Vinayaka Embroidery World for technology that performs consistently – not occasionally.
-                            </p>
-                        </FadeIn>
+                    <FadeIn className="mb-12 text-center">
+                        <h2 className="font-headline text-3xl md:text-4xl text-charcoal mb-4">Embroidery Machines for Every Scale</h2>
+                        <p className="text-graphite text-lg max-w-2xl mx-auto">
+                            Empowering creators from home studios to large-scale export houses.
+                        </p>
+                    </FadeIn>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {[
+                            {
+                                title: "Single Head Machines",
+                                desc: "Perfect for boutiques and sampling. Precision work with ease.",
+                                image: "/assets/picture/single_head_embroidery_machine.png",
+                                href: "/products?category=embroidery-single"
+                            },
+                            {
+                                title: "Multi-Head Systems",
+                                desc: "High-speed production workhorses designed for efficiency.",
+                                image: "/assets/picture/multi_head_embroidery_machine.png",
+                                href: "/products?category=embroidery-multi"
+                            },
+                            {
+                                title: "Speciality Machines",
+                                desc: "Cording, sequins, and mixed-media capabilities for unique designs.",
+                                image: "/assets/picture/cording_sequin_embroidery_machine.png",
+                                href: "/products?category=embroidery-specialty"
+                            }
+                        ].map((item, i) => (
+                            <FadeIn key={i} delay={i * 0.1}>
+                                <Link href={item.href} className="group block h-full">
+                                    <div className="bg-paper border border-mist hover:border-bronze transition-all duration-300 rounded-sm overflow-hidden h-full flex flex-col hover:shadow-lg">
+                                        <div className="relative h-64 overflow-hidden">
+                                            <Image
+                                                src={item.image}
+                                                alt={item.title}
+                                                fill
+                                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                            />
+                                            <div className="absolute inset-0 bg-charcoal/10 group-hover:bg-transparent transition-colors" />
+                                        </div>
+                                        <div className="p-8 flex-1 flex flex-col">
+                                            <h3 className="font-headline text-2xl text-charcoal mb-3 group-hover:text-[#A85846] transition-colors">{item.title}</h3>
+                                            <p className="text-stone-darker leading-relaxed mb-6 flex-1">{item.desc}</p>
+                                            <div className="mt-auto">
+                                                <span className="text-sm font-bold uppercase tracking-widest text-[#A85846] flex items-center gap-2 group-hover:gap-3 transition-all">
+                                                    View Models <span aria-hidden="true">&rarr;</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Link>
+                            </FadeIn>
+                        ))}
                     </div>
                 </Container>
             </Section>
+
+            {/* Why Choose Us - Premium Strict Grid */}
+            <section className="py-24 bg-[#FFFCF8]">
+                <Container>
+                    <FadeIn>
+                        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                            <div>
+                                <h2 className="font-headline text-3xl md:text-5xl text-charcoal mb-4">The Foundation of Your Production</h2>
+                                <p className="text-graphite text-lg max-w-xl font-body">
+                                    More than just machinery, we provide the infrastructure for your success.
+                                </p>
+                            </div>
+                            <Link href="/about">
+                                <Button variant="ghost" className="text-charcoal hover:text-[#A85846] gap-2 hover:bg-[#F5F0E8]">
+                                    About Vinayaka <span aria-hidden="true">&rarr;</span>
+                                </Button>
+                            </Link>
+                        </div>
+
+                        <div className="border-t border-l border-stone-200 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                            {[
+                                {
+                                    title: "Technical Mastery",
+                                    desc: "Our engineers understand the physics of every stitch, ensuring your machines run at peak optimization.",
+                                    icon: (
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></svg>
+                                    )
+                                },
+                                {
+                                    title: "Comprehensive Training",
+                                    desc: "We don't just install; we educate. Your team will master the software and mechanics before we leave.",
+                                    icon: (
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10v6" /><path d="M20 20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12Z" /><path d="M10 12h4" /><path d="M12 10v4" /></svg>
+                                    )
+                                },
+                                {
+                                    title: "Rapid Support",
+                                    desc: "Downtime destroys margins. Our local rapid-response teams ensure you are back online in record time.",
+                                    icon: (
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                                    )
+                                },
+                                {
+                                    title: "Spare Parts Ecosystem",
+                                    desc: "With 98% stock availability, we eliminate the waiting game for critical components.",
+                                    icon: (
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /><polyline points="3.27 6.96 12 12.01 20.73 6.96" /><line x1="12" y1="22.08" x2="12" y2="12" /></svg>
+                                    )
+                                },
+                                {
+                                    title: "Production Consulting",
+                                    desc: "We analyze your workflow and suggest optimizations to increase output without adding machines.",
+                                    icon: (
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg>
+                                    )
+                                },
+                                {
+                                    title: "Legacy of Trust",
+                                    desc: "Partnering with Vinayaka means leveraging decades of industry reputation and stability.",
+                                    icon: (
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                    )
+                                }
+                            ].map((item, i) => (
+                                <div key={i} className="group p-10 border-r border-b border-stone-200 bg-white hover:bg-[#FDFBF7] transition-colors duration-300">
+                                    <div className="mb-6 text-[#A85846] group-hover:scale-110 transition-transform duration-300">
+                                        {item.icon}
+                                    </div>
+                                    <h3 className="font-headline text-xl text-charcoal mb-3">{item.title}</h3>
+                                    <p className="text-stone-darker text-sm leading-relaxed">
+                                        {item.desc}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </FadeIn>
+                </Container>
+            </section>
 
             {/* CTA */}
             <Section>
