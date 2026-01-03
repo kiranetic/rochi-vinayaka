@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Globe, Scissors, Wrench } from "lucide-react";
 import { Container } from "./container";
 import { cn } from "../ui/button";
 
@@ -15,9 +15,9 @@ const navLinks = [
         name: "Divisions",
         href: "/divisions", // Placeholder, triggers dropdown
         children: [
-            { name: "Vinayaka Overseas", href: "/divisions/overseas" },
-            { name: "Vinayaka Embroidery World", href: "/divisions/embroidery" },
-            { name: "Vinayaka Service Center", href: "/divisions/service-center" },
+            { name: "Vinayaka Overseas", href: "/divisions/overseas", icon: Globe },
+            { name: "Vinayaka Embroidery World", href: "/divisions/embroidery", icon: Scissors },
+            { name: "Vinayaka Service Center", href: "/divisions/service-center", icon: Wrench },
         ],
     },
     { name: "Products", href: "/products" },
@@ -95,8 +95,9 @@ export function Header() {
                                                         <Link
                                                             key={child.name}
                                                             href={child.href}
-                                                            className="text-sm text-graphite hover:text-bronze py-2 border-b border-dashed border-mist last:border-0 transition-colors"
+                                                            className="flex items-center gap-3 text-sm font-semibold text-charcoal hover:text-bronze py-2 border-b border-dashed border-mist last:border-0 transition-colors group/item"
                                                         >
+                                                            {child.icon && <child.icon className="w-4 h-4 text-stone-400 group-hover/item:text-bronze transition-colors" />}
                                                             {child.name}
                                                         </Link>
                                                     ))}
@@ -152,7 +153,8 @@ export function Header() {
                                             <span className="text-lg font-headline font-medium text-ink border-b border-mist pb-2">{link.name}</span>
                                             <div className="flex flex-col gap-3 pl-4">
                                                 {link.children.map(child => (
-                                                    <Link key={child.name} href={child.href} className="text-base text-graphite" onClick={() => setIsOpen(false)}>
+                                                    <Link key={child.name} href={child.href} className="flex items-center gap-3 text-base text-graphite hover:text-bronze transition-colors" onClick={() => setIsOpen(false)}>
+                                                        {child.icon && <child.icon className="w-5 h-5 text-stone-400" />}
                                                         {child.name}
                                                     </Link>
                                                 ))}

@@ -32,7 +32,7 @@ export default function Contact() {
                                     className="group flex gap-4 items-start"
                                 >
                                     <MapPin className="w-6 h-6 md:w-8 md:h-8 text-bronze shrink-0 mt-1" />
-                                    <address className="not-italic font-headline text-2xl md:text-3xl text-charcoal leading-snug group-hover:text-bronze transition-colors">
+                                    <address className="not-italic text-lg font-medium text-charcoal leading-relaxed group-hover:text-bronze transition-colors">
                                         No 12 and 13, Outer Ring Rd,<br />
                                         near Water Tank, BTM 2nd Stage,<br />
                                         BTM Layout, Bengaluru,<br />
