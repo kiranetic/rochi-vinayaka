@@ -75,6 +75,28 @@ export default function Home() {
             <p className="font-headline text-2xl md:text-3xl text-charcoal max-w-4xl mx-auto leading-normal">
               Our machines and services support operations across manufacturing, leather, lifestyle, apparel, and creative industries – quietly enabling scale, consistency, and output.
             </p>
+
+            {/* Client Logos Grid */}
+            <div className="flex flex-wrap justify-center items-center gap-2 md:gap-4 mt-16">
+              {[
+                { name: "Genous Automotive", src: "/assets/clients/genous-automotive.png" },
+                { name: "Ovion Lifestyle", src: "/assets/clients/ovion-lifestyle.png" },
+                { name: "Saddles Inc", src: "/assets/clients/saddles-inc.png" },
+                { name: "Saddles International", src: "/assets/clients/saddles-international.png" },
+                { name: "Stanley", src: "/assets/clients/stanley.png" },
+              ].map((client, i) => (
+                <div key={i} className="relative group flex items-center justify-center">
+                  <div className="relative h-24 w-44 md:w-56 transition-transform duration-300 hover:scale-110">
+                    <Image
+                      src={client.src}
+                      alt={client.name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
           </FadeIn>
         </Container>
       </Section>

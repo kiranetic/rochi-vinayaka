@@ -229,6 +229,38 @@ export default function Overseas() {
                 </Container>
             </section>
 
+            {/* Clients / Partners Section */}
+            <Section background="stone" className="py-24 border-t border-stone-200">
+                <Container>
+                    <FadeIn>
+                        <div className="text-center mb-12">
+                            <span className="text-sm font-semibold uppercase tracking-widest text-[#A85846] mb-2 block">Trusted Partnerships</span>
+                            <h2 className="font-headline text-3xl md:text-4xl text-charcoal">Supporting Industry Leaders</h2>
+                        </div>
+                        <div className="flex flex-wrap justify-center items-center gap-2 md:gap-4 opacity-100 mt-12">
+                            {[
+                                { name: "Genous Automotive", src: "/assets/clients/genous-automotive.png", width: 140 },
+                                { name: "Ovion Lifestyle", src: "/assets/clients/ovion-lifestyle.png", width: 120 },
+                                { name: "Saddles Inc", src: "/assets/clients/saddles-inc.png", width: 100 },
+                                { name: "Saddles International", src: "/assets/clients/saddles-international.png", width: 140 },
+                                { name: "Stanley", src: "/assets/clients/stanley.png", width: 130 },
+                            ].map((client, i) => (
+                                <div key={i} className="relative group flex items-center justify-center">
+                                    <div className="relative h-24 w-44 md:w-56 transition-transform duration-300 hover:scale-110">
+                                        <Image
+                                            src={client.src}
+                                            alt={client.name}
+                                            fill
+                                            className="object-contain"
+                                        />
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </FadeIn>
+                </Container>
+            </Section>
+
             {/* CTA - Split List Design */}
             <Section background="slate" className="py-24 md:py-32">
                 <Container>
