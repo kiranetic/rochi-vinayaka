@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 
 import { EvolutionTimeline } from "@/components/about/evolution";
 import { DivisionsStory } from "@/components/about/divisions-story";
+import { ClientVoices } from "@/components/home/client-voices";
 
 
 export default function About() {
@@ -145,6 +146,9 @@ export default function About() {
                     </FadeIn>
                 </Container>
             </Section>
+
+            {/* Impact Stories */}
+            <ClientVoices headline="Impact Stories" subhead="Real experiences from our community." />
 
             {/* Reliable CTA - Centered Badge Design */}
             <Section background="slate" className="py-24 lg:py-40">

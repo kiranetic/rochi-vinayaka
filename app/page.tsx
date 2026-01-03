@@ -10,6 +10,7 @@ import { ProductCard } from "@/components/product-card";
 import { WhyChooseUs } from "@/components/home/why-choose-us";
 import { ProductCarousel } from "@/components/home/product-carousel";
 import { DivisionsGrid } from "@/components/home/divisions-grid";
+import { ClientVoices } from "@/components/home/client-voices";
 import popularProductsData from "@/json-data/popular_products.json";
 
 export default function Home() {
@@ -100,6 +101,9 @@ export default function Home() {
           </FadeIn>
         </Container>
       </Section>
+
+      {/* 7. Client Voices */}
+      <ClientVoices headline="Voices of Trust" subhead="From home creators to industrial partners." />
 
       {/* 7. CTA */}
       <Section background="slate" className="text-center">
