@@ -5,6 +5,7 @@ import { ShieldCheck, Gem, Handshake, Cpu } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { FadeIn } from "@/components/ui/fade-in";
 
 export const metadata: Metadata = {
@@ -145,17 +146,35 @@ export default function About() {
                 </Container>
             </Section>
 
-            {/* Reliable CTA */}
-            <Section background="slate" className="text-center">
+            {/* Reliable CTA - Centered Badge Design */}
+            <Section background="slate" className="py-24 lg:py-40">
                 <Container>
                     <FadeIn>
-                        <h2 className="font-headline text-4xl text-paper mb-6">A Reliable Presence</h2>
-                        <p className="text-stone/80 text-lg max-w-2xl mx-auto mb-10">
-                            Clients continue to work with Vinayaka Groups not because we are the loudest – but because we are dependable.
-                        </p>
-                        <Link href="/contact">
-                            <Button size="lg">Get in Touch</Button>
-                        </Link>
+                        <div className="flex flex-col text-center gap-8 items-center">
+                            <div>
+                                <Badge variant="secondary">Partner With Us</Badge>
+                            </div>
+                            <div className="flex flex-col gap-4">
+                                <h3 className="text-3xl md:text-5xl font-headline text-paper tracking-tight max-w-2xl mx-auto leading-tight">
+                                    A Reliable <span className="text-[#A85846]">Presence</span>
+                                </h3>
+                                <p className="text-lg leading-relaxed text-stone-300 max-w-2xl mx-auto">
+                                    Clients continue to work with Vinayaka Groups not because we are the loudest – but because we are dependable. Experience the difference.
+                                </p>
+                            </div>
+                            <div className="flex flex-col sm:flex-row gap-4 mt-4">
+                                <Link href="/contact?type=call">
+                                    <Button variant="outline" className="gap-4 w-full sm:w-auto border-stone-500 text-stone-300 hover:bg-white hover:text-charcoal hover:border-transparent">
+                                        Speak to us <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+                                    </Button>
+                                </Link>
+                                <Link href="/contact">
+                                    <Button className="gap-4 w-full sm:w-auto bg-[#A85846] text-white hover:bg-[#A85846]/90 border-transparent">
+                                        Get in Touch <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8L22 12L18 16" /><path d="M2 12H22" /></svg>
+                                    </Button>
+                                </Link>
+                            </div>
+                        </div>
                     </FadeIn>
                 </Container>
             </Section>

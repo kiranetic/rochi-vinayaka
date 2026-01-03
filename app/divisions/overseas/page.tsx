@@ -229,21 +229,47 @@ export default function Overseas() {
                 </Container>
             </section>
 
-            {/* CTA */}
-            <Section>
+            {/* CTA - Split List Design */}
+            <Section background="slate" className="py-24 md:py-32">
                 <Container>
-                    <FadeIn className="text-center bg-slate text-paper py-16 px-6 md:px-12 relative overflow-hidden">
-                        {/* Background Decoration */}
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-bronze/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-
-                        <h2 className="font-headline text-3xl md:text-4xl mb-6 relative z-10">Built for Long-Term Partnerships</h2>
-                        <p className="text-lg opacity-80 max-w-2xl mx-auto mb-10 relative z-10">
-                            Our clients include workshops, factories, exporters, and institutional buyers who value clarity, consistency, and dependable follow-through.
-                        </p>
-                        <Link href="/contact" className="relative z-10">
-                            <Button variant="primary" size="lg">Contact Vinayaka Overseas</Button>
-                        </Link>
-                    </FadeIn>
+                    <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
+                        <div className="lg:w-1/2">
+                            <FadeIn>
+                                <span className="text-sm font-semibold uppercase tracking-widest text-[#A85846] mb-4 block">Partnership</span>
+                                <h2 className="font-headline text-3xl md:text-5xl text-paper mb-6 leading-tight">
+                                    Built for Long-Term <br /> Production Resilience.
+                                </h2>
+                                <p className="text-stone-300 text-lg leading-relaxed mb-8 max-w-xl">
+                                    Our clients include workshops, factories, exporters, and institutional buyers who value clarity, consistency, and dependable follow-through.
+                                </p>
+                                <Link href="/contact">
+                                    <Button variant="primary" size="lg" className="bg-[#A85846] text-white hover:bg-[#A85846]/90 border-transparent">
+                                        Start a Conversation <span className="ml-2">&rarr;</span>
+                                    </Button>
+                                </Link>
+                            </FadeIn>
+                        </div>
+                        <div className="lg:w-1/3 w-full">
+                            <FadeIn delay={0.2}>
+                                <ul className="space-y-6">
+                                    {[
+                                        "Seamless Factory Integration",
+                                        "24/7 Technical Consultation",
+                                        "Customized Procurement Plans",
+                                        "Scalable Supply Chain",
+                                        "Volume-Based Pricing"
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex items-center gap-4 text-paper p-4 bg-white/5 rounded-sm border border-white/10 hover:bg-white/10 transition-colors duration-300">
+                                            <div className="w-6 h-6 rounded-full bg-[#A85846] flex items-center justify-center shrink-0">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-white"><polyline points="20 6 9 17 4 12" /></svg>
+                                            </div>
+                                            <span className="font-medium tracking-wide">{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </FadeIn>
+                        </div>
+                    </div>
                 </Container>
             </Section>
         </>

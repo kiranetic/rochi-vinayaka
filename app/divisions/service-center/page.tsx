@@ -150,18 +150,47 @@ export default function ServiceCenter() {
                 </Container>
             </Section>
 
-            {/* CTA */}
-            <Section>
+            {/* CTA - Split List Design */}
+            <Section background="stone" className="py-24 md:py-32">
                 <Container>
-                    <FadeIn className="text-center py-16">
-                        <h2 className="font-headline text-3xl md:text-4xl text-charcoal mb-6">Prevent Downtime Before It Happens</h2>
-                        <p className="text-graphite text-lg max-w-2xl mx-auto mb-10">
-                            Schedule a comprehensive health check for your production line today.
-                        </p>
-                        <Link href="/contact">
-                            <Button variant="primary" size="lg">Schedule A Health Check</Button>
-                        </Link>
-                    </FadeIn>
+                    <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
+                        <div className="lg:w-1/2">
+                            <FadeIn>
+                                <span className="text-sm font-semibold uppercase tracking-widest text-[#A85846] mb-4 block">Uptime Assurance</span>
+                                <h2 className="font-headline text-3xl md:text-5xl text-charcoal mb-6 leading-tight">
+                                    Prevent Downtime <br /> Before It Happens.
+                                </h2>
+                                <p className="text-graphite text-lg leading-relaxed mb-8 max-w-xl">
+                                    Don't wait for a breakdown to think about maintenance. Schedule a comprehensive health check for your production line today.
+                                </p>
+                                <Link href="/contact">
+                                    <Button size="lg" className="bg-[#A85846] text-white hover:bg-[#A85846]/90 border-transparent">
+                                        Schedule Health Check <span className="ml-2">&rarr;</span>
+                                    </Button>
+                                </Link>
+                            </FadeIn>
+                        </div>
+                        <div className="lg:w-1/3 w-full">
+                            <FadeIn delay={0.2}>
+                                <ul className="space-y-6">
+                                    {[
+                                        "Detailed Mechanical Audit",
+                                        "Calibration Certificate",
+                                        "Safety Compliance Check",
+                                        "Performance Optimization",
+                                        "Operator Best-Practice Briefing"
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex items-center gap-4 text-charcoal p-4 bg-white rounded-sm border border-stone-200 hover:border-[#A85846]/30 shadow-sm transition-colors duration-300">
+                                            <div className="w-6 h-6 rounded-full bg-[#A85846]/10 flex items-center justify-center shrink-0">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-[#A85846]"><polyline points="20 6 9 17 4 12" /></svg>
+                                            </div>
+                                            <span className="font-medium tracking-wide">{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </FadeIn>
+                        </div>
+                    </div>
                 </Container>
             </Section>
         </>

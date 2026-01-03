@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { FadeIn } from "@/components/ui/fade-in";
 
 export default function Embroidery() {
@@ -217,17 +218,36 @@ export default function Embroidery() {
                 </Container>
             </section>
 
-            {/* CTA */}
-            <Section>
+
+            {/* CTA - Centered Badge Design */}
+            <Section background="paper" className="py-24 lg:py-40">
                 <Container>
-                    <FadeIn className="text-center py-16">
-                        <h2 className="font-headline text-3xl md:text-4xl text-charcoal mb-6">Discuss Your Requirements</h2>
-                        <p className="text-graphite text-lg max-w-2xl mx-auto mb-10">
-                            We engage thoughtfully, understanding design goals, production volumes, and long-term expectations.
-                        </p>
-                        <Link href="/contact">
-                            <Button variant="primary" size="lg">Connect With Embroidery Specialists</Button>
-                        </Link>
+                    <FadeIn>
+                        <div className="flex flex-col text-center gap-8 items-center">
+                            <div>
+                                <Badge variant="accent">Embroidery Consultation</Badge>
+                            </div>
+                            <div className="flex flex-col gap-4">
+                                <h3 className="text-3xl md:text-5xl font-headline text-charcoal tracking-tight max-w-2xl mx-auto leading-tight">
+                                    Discuss Your <span className="text-[#A85846]">Requirements</span>
+                                </h3>
+                                <p className="text-lg leading-relaxed text-graphite max-w-2xl mx-auto">
+                                    We engage thoughtfully, understanding design goals, production volumes, and long-term expectations. Let's craft the perfect setup for you.
+                                </p>
+                            </div>
+                            <div className="flex flex-col sm:flex-row gap-4 mt-4">
+                                <Link href="/contact?type=call">
+                                    <Button variant="outline" className="gap-4 w-full sm:w-auto hover:border-[#A85846] hover:text-[#A85846]">
+                                        Book a Call <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+                                    </Button>
+                                </Link>
+                                <Link href="/contact">
+                                    <Button className="gap-4 w-full sm:w-auto bg-charcoal hover:bg-black text-white">
+                                        Visit Showroom <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8L22 12L18 16" /><path d="M2 12H22" /></svg>
+                                    </Button>
+                                </Link>
+                            </div>
+                        </div>
                     </FadeIn>
                 </Container>
             </Section>
