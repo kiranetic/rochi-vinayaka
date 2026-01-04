@@ -98,7 +98,7 @@ function SocialLink({ href, icon, label }: { href: string; icon: React.ReactNode
             aria-label={label}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-stone-300 hover:bg-[#A85846] hover:text-white transition-all duration-300"
+            className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-stone-300 hover:bg-[#A85846] hover:text-white hover:scale-110 transition-all duration-300"
         >
             {icon}
         </a>

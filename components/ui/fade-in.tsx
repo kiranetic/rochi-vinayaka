@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, HTMLMotionProps } from "framer-motion";
+import { motion, HTMLMotionProps, useReducedMotion } from "framer-motion";
 import { cn } from "./button";
 
 interface FadeInProps extends HTMLMotionProps<"div"> {
@@ -15,20 +15,22 @@ export function FadeIn({
     direction = "up",
     ...props
 }: FadeInProps) {
+    const shouldReduceMotion = useReducedMotion();
+
     const variants = {
         hidden: {
-            opacity: 0,
-            y: direction === "up" ? 20 : direction === "down" ? -20 : 0,
-            x: direction === "left" ? 20 : direction === "right" ? -20 : 0,
+            opacity: shouldReduceMotion ? 1 : 0,
+            y: shouldReduceMotion ? 0 : (direction === "up" ? 20 : direction === "down" ? -20 : 0),
+            x: shouldReduceMotion ? 0 : (direction === "left" ? 20 : direction === "right" ? -20 : 0),
         },
         visible: {
             opacity: 1,
             y: 0,
             x: 0,
             transition: {
-                duration: 0.8,
-                ease: "easeOut",
-                delay: delay,
+                duration: shouldReduceMotion ? 0 : 0.6,
+                ease: [0.25, 0.1, 0.25, 1], // Smoother cubic-bezier
+                delay: shouldReduceMotion ? 0 : delay,
             },
         },
     };
@@ -37,7 +39,7 @@ export function FadeIn({
         <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-80px" }}
             variants={variants as any}
             className={cn(className)}
             {...props}

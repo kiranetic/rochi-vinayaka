@@ -60,7 +60,7 @@ export function Header() {
                 <Container size="full" className="flex items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2 group">
-                        <span className="font-headline font-medium text-2xl md:text-3xl text-ink tracking-tight group-hover:opacity-80 transition-opacity">
+                        <span className="font-headline font-medium text-2xl md:text-3xl text-ink tracking-tight group-hover:opacity-80 transition-all duration-300 group-hover:scale-[1.02] origin-left">
                             Vinayaka Groups
                         </span>
                     </Link>
@@ -84,22 +84,28 @@ export function Header() {
                                         <AnimatePresence>
                                             {dropdownOpen && (
                                                 <motion.div
-                                                    initial={{ opacity: 0, y: 10 }}
+                                                    initial={{ opacity: 0, y: 8 }}
                                                     animate={{ opacity: 1, y: 0 }}
-                                                    exit={{ opacity: 0, y: 10 }}
-                                                    transition={{ duration: 0.2 }}
+                                                    exit={{ opacity: 0, y: 8 }}
+                                                    transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
                                                     className="absolute top-full right-0 w-64 bg-paper border border-mist shadow-lg pt-2 pb-4 px-4 flex flex-col gap-2"
                                                 >
                                                     <div className="absolute -top-2 left-0 right-0 h-4 bg-transparent" /> {/* Bridge */}
-                                                    {link.children.map((child) => (
-                                                        <Link
+                                                    {link.children.map((child, childIndex) => (
+                                                        <motion.div
                                                             key={child.name}
-                                                            href={child.href}
-                                                            className="flex items-center gap-3 text-sm font-semibold text-charcoal hover:text-bronze py-2 border-b border-dashed border-mist last:border-0 transition-colors group/item"
+                                                            initial={{ opacity: 0, x: -8 }}
+                                                            animate={{ opacity: 1, x: 0 }}
+                                                            transition={{ delay: childIndex * 0.05, duration: 0.2 }}
                                                         >
-                                                            {child.icon && <child.icon className="w-4 h-4 text-stone-400 group-hover/item:text-bronze transition-colors" />}
-                                                            {child.name}
-                                                        </Link>
+                                                            <Link
+                                                                href={child.href}
+                                                                className="flex items-center gap-3 text-sm font-semibold text-charcoal hover:text-bronze py-2 border-b border-dashed border-mist last:border-0 transition-colors group/item"
+                                                            >
+                                                                {child.icon && <child.icon className="w-4 h-4 text-stone-400 group-hover/item:text-bronze transition-colors" />}
+                                                                {child.name}
+                                                            </Link>
+                                                        </motion.div>
                                                     ))}
                                                 </motion.div>
                                             )}

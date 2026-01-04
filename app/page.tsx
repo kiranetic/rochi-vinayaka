@@ -87,7 +87,7 @@ export default function Home() {
                 { name: "Stanley", src: "/assets/clients/stanley.png" },
               ].map((client, i) => (
                 <div key={i} className="relative group flex items-center justify-center">
-                  <div className="relative h-24 w-44 md:w-56 transition-transform duration-300 hover:scale-110">
+                  <div className="relative h-24 w-44 md:w-56 transition-all duration-300 hover:scale-105 opacity-70 hover:opacity-100">
                     <Image
                       src={client.src}
                       alt={client.name}

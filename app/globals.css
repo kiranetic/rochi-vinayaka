@@ -104,3 +104,117 @@ body {
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+
+/* ===== Premium Animation Utilities ===== */
+
+/* Reduced Motion Support - Respects user accessibility preferences */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Smooth Focus States */
+:focus-visible {
+  outline: 2px solid var(--color-bronze);
+  outline-offset: 2px;
+  transition: outline-offset 0.2s ease;
+}
+
+/* Premium Link Hover - Underline Reveal */
+.link-hover-reveal {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-hover-reveal::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.link-hover-reveal:hover::after {
+  width: 100%;
+}
+
+/* Card Lift Effect */
+.card-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Press Feedback */
+.btn-press {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-press:active {
+  transform: scale(0.98);
+}
+
+/* Subtle Pulse for Loading States */
+@keyframes subtle-pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-subtle-pulse {
+  animation: subtle-pulse 2s ease-in-out infinite;
+}
+
+/* Fade Up Entrance (CSS-only alternative to FadeIn) */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+/* Icon Hover Bounce */
+.icon-hover-bounce {
+  transition: transform 0.2s ease;
+}
+
+.icon-hover-bounce:hover {
+  transform: translateY(-2px);
+}
+
+/* Smooth Image Zoom */
+.img-zoom {
+  transition: transform 0.5s ease;
+}
+
+.img-zoom:hover {
+  transform: scale(1.05);
+}
