@@ -104,7 +104,7 @@ export default function Overseas() {
                         <FadeIn>
                             <div className="relative aspect-[5/4] rounded-sm overflow-hidden shadow-lg border border-white/50">
                                 <Image
-                                    src="/assets/picture/vinayaka-overseas-shop-front.jpg"
+                                    src="/assets/picture/vinayaka-overseas-storefront.png"
                                     alt="Vinayaka Overseas Showroom"
                                     fill
                                     className="object-cover hover:scale-105 transition-transform duration-1000"

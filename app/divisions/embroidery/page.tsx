@@ -45,7 +45,7 @@ export default function Embroidery() {
                         <FadeIn>
                             <div className="relative aspect-[5/4] rounded-sm overflow-hidden shadow-xl border border-white/50">
                                 <Image
-                                    src="/assets/picture/vinayaka-embroidery-world-facility-view.jpg"
+                                    src="/assets/picture/vinayaka-embroidery-world-storefront.png"
                                     alt="Vinayaka Embroidery Facility"
                                     fill
                                     className="object-cover hover:scale-105 transition-transform duration-1000"
