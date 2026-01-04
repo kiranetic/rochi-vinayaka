@@ -100,9 +100,9 @@ export default function Overseas() {
             {/* Store Front Showcase */}
             <Section background="stone" className="py-24">
                 <Container>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-                        <FadeIn>
-                            <div className="relative aspect-[5/4] rounded-sm overflow-hidden shadow-lg border border-white/50">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-24 items-center">
+                        <FadeIn className="lg:col-span-2">
+                            <div className="relative aspect-[6/4] rounded-sm overflow-hidden shadow-lg border border-white/50">
                                 <Image
                                     src="/assets/picture/vinayaka-overseas-storefront.png"
                                     alt="Vinayaka Overseas Showroom"
@@ -114,11 +114,11 @@ export default function Overseas() {
                         <FadeIn delay={0.2} className="flex flex-col justify-center">
                             <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#A85846] mb-3">The Experience</span>
                             <h2 className="font-headline text-3xl md:text-4xl lg:text-5xl text-charcoal mb-6 leading-tight">
-                                Where Craft Meets Consultation.
+                                Craft Meets Expertise.
                             </h2>
 
                             <p className="text-graphite text-lg leading-relaxed mb-8 max-w-lg">
-                                Our showroom is a dedicated testing ground. Whether you're optimising a factory line or selecting your first machine, we invite you to experience the tactility of our units firsthand—running fabrics, testing stitches, and verifying performance before you commit.
+                                Our showroom is a hands-on testing space. From optimising production lines to choosing your first machine, experience our units firsthand-run fabrics, test stitches, and verify performance before committing.
                             </p>
 
                             <div className="grid grid-cols-2 gap-8 border-t border-stone-200 pt-8 max-w-lg">
