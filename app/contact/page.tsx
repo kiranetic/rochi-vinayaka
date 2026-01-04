@@ -31,7 +31,9 @@ export default function Contact() {
                                     rel="noopener noreferrer"
                                     className="group flex gap-4 items-start"
                                 >
-                                    <MapPin className="w-6 h-6 md:w-8 md:h-8 text-bronze shrink-0 mt-1" />
+                                    <div className="w-10 h-10 rounded-full bg-stone flex items-center justify-center shrink-0 mt-1">
+                                        <MapPin className="w-5 h-5 text-bronze" />
+                                    </div>
                                     <address className="not-italic text-lg font-medium text-charcoal leading-relaxed group-hover:text-bronze transition-colors">
                                         No 12 and 13, Outer Ring Rd,<br />
                                         near Water Tank, BTM 2nd Stage,<br />

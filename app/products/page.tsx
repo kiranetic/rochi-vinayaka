@@ -89,7 +89,7 @@ export default function Products() {
             <Section background="stone" className="min-h-screen pt-12">
                 <Container>
                     {/* Controls Row */}
-                    <FadeIn className="bg-paper p-6 rounded-xl shadow-sm border border-mist mb-12">
+                    <FadeIn className="bg-paper p-6 rounded-sm shadow-sm border border-mist mb-12">
                         <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
 
                             {/* Search Bar */}
@@ -100,7 +100,7 @@ export default function Products() {
                                     placeholder="Search by name, brand, or category..."
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
-                                    className="w-full pl-12 pr-4 py-3 rounded-lg border border-mist bg-paper focus:bg-white focus:border-bronze focus:outline-none transition-all text-charcoal placeholder:text-graphite/60 shadow-sm"
+                                    className="w-full pl-12 pr-4 py-3 rounded-sm border border-mist bg-paper focus:bg-white focus:border-bronze focus:outline-none transition-all text-charcoal placeholder:text-graphite/60 shadow-sm"
                                 />
                             </div>
 
@@ -108,14 +108,14 @@ export default function Products() {
                             <div className="relative w-full lg:w-1/4">
                                 <button
                                     onClick={() => setIsBrandOpen(!isBrandOpen)}
-                                    className="w-full flex items-center justify-between px-4 py-3 rounded-lg border border-mist bg-paper hover:bg-white hover:border-bronze transition-all text-charcoal shadow-sm"
+                                    className="w-full flex items-center justify-between px-4 py-3 rounded-sm border border-mist bg-paper hover:bg-white hover:border-bronze transition-all text-charcoal shadow-sm"
                                 >
                                     <span className="truncate">{selectedBrand}</span>
                                     <ChevronDown className={cn("w-4 h-4 transition-transform", isBrandOpen ? "rotate-180" : "")} />
                                 </button>
 
                                 {isBrandOpen && (
-                                    <div className="absolute top-full left-0 right-0 mt-2 bg-paper border border-mist rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto">
+                                    <div className="absolute top-full left-0 right-0 mt-2 bg-paper border border-mist rounded-sm shadow-lg z-50 max-h-60 overflow-y-auto">
                                         {brands.map((brand) => (
                                             <button
                                                 key={brand}
@@ -157,8 +157,8 @@ export default function Products() {
                                 className={cn(
                                     "text-lg font-medium pb-4 border-b-2 transition-all duration-300 px-2",
                                     activeCategory === tab.id
-                                        ? "text-ink border-ink"
-                                        : "text-steel border-transparent hover:text-bronze"
+                                        ? "text-charcoal border-charcoal"
+                                        : "text-graphite border-transparent hover:text-bronze"
                                 )}
                             >
                                 {tab.label}

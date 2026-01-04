@@ -43,8 +43,8 @@ export default function About() {
                                 </div>
                             </FadeIn>
                         </div>
-                        <div className="lg:col-span-5 relative">
-                            <FadeIn delay={0.2} className="relative aspect-[3/4] lg:aspect-auto h-full min-h-[500px] bg-mist/20 rounded-sm overflow-hidden border border-stone-200 shadow-2xl">
+                        <div className="lg:col-span-5 relative overflow-hidden">
+                            <FadeIn delay={0.2} className="relative aspect-[3/4] lg:aspect-auto h-full min-h-[400px] bg-mist/20 rounded-sm overflow-hidden border border-stone-200 shadow-2xl">
                                 <Image
                                     src="/assets/picture/KrishnaMurthySir.jpeg"
                                     alt="Mr. Krishna Murthy, Founder of Vinayaka Groups"

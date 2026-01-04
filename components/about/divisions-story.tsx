@@ -68,7 +68,7 @@ export function DivisionsStory() {
                                     key={division.id}
                                     onClick={() => setActiveTab(index)}
                                     className={`
-                                group cursor-pointer rounded-sm p-6 lg:p-8 transition-all duration-300 border relative overflow-hidden flex-1 flex items-center
+                                group cursor-pointer rounded-sm p-4 lg:p-8 transition-all duration-300 border relative overflow-hidden flex items-center
                                 ${isActive
                                             ? "bg-[#F5F0E8] border-[#E8E1D9] shadow-sm"
                                             : "bg-transparent border-transparent hover:bg-[#F5F0E8]/50 hover:border-[#E8E1D9]/50"
