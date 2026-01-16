@@ -12,21 +12,21 @@ const divisions = [
         title: "Vinayaka Overseas",
         id: "overseas",
         href: "/divisions/overseas",
-        image: "/assets/picture/accessories-storage.jpg",
+        image: "/assets/picture/vinayaka-overseas-storefront.png",
         description: "Sales and sourcing of domestic, industrial, and refurbished sewing machines.",
     },
     {
         title: "Vinayaka Embroidery World",
         id: "embroidery",
         href: "/divisions/embroidery",
-        image: "/assets/picture/production-line.jpg",
+        image: "/assets/picture/kasuti-machine.jpg",
         description: "Specialized vertical dedicated to computerized embroidery technology.",
     },
     {
         title: "Vinayaka Service Center",
         id: "service-center",
         href: "/divisions/service-center",
-        image: "/assets/picture/precision-sewing.jpg",
+        image: "/assets/picture/juki-machine.jpg",
         description: "The foundation of our legacy – service, maintenance, and genuine spare parts.",
     },
 ];
@@ -53,7 +53,7 @@ export function DivisionsGrid() {
                                     src={division.image}
                                     alt={division.title}
                                     fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
+                                    className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100 brightness-[0.9] contrast-[1.05] saturate-[1.05]"
                                 />
 
                                 {/* Hover Frame - Inset Border */}
